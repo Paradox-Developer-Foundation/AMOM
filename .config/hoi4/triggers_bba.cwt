@@ -1,0 +1,190 @@
+
+### Checks if country has specific balance of power.
+## scope = country
+alias[trigger:has_power_balance] = {
+    id = <balance_of_power>
+}
+
+### Checks if country has any balance of power.
+## scope = country
+alias[trigger:has_any_power_balance] = bool
+
+### Checks if country has balance of power modifier.
+## scope = country
+alias[trigger:has_power_balance_modifier] = {
+    id = <balance_of_power>
+    modifier = <static_modifier>
+}
+
+### Checks if BOP is in certain range.
+## scope = country
+alias[trigger:is_power_balance_in_range] = {
+    id = <balance_of_power>
+    range = value[bop_range_id]
+}
+
+### Checks if BOP is more or less than certain value (> <).
+## scope = country
+alias[trigger:power_balance_value] = {
+    id = <balance_of_power>
+    value = float[-1..1]
+}
+
+### Checks if BOP daily drift is more or less than certain value (> <).
+## scope = country
+alias[trigger:power_balance_daily_change] = {
+    id = <balance_of_power>
+    value = float[-1..1]
+}
+
+### Checks if BOP weekly drift is more or less than certain value (> <).
+## scope = country
+alias[trigger:power_balance_weekly_change] = {
+    id = <balance_of_power>
+    value = float[-1..1]
+}
+
+### Checks if country has specific balance of power side active.
+## scope = country
+alias[trigger:is_power_balance_side_active] = {
+    id = <balance_of_power>
+    side = value[bop_side]
+}
+
+### Check if division has this battalion as majority in template
+## scope = unit
+alias[trigger:division_has_majority_template] = <unit>
+
+### Check if any division in country division has fullfils the triggers
+## scope = country
+## push_scope = unit
+alias[trigger:any_country_division] = {
+    ## cardinality = 1..inf
+    alias_name[trigger] = alias_match_left[trigger]
+}
+
+## scope = state
+## push_scope = unit
+alias[trigger:any_state_division] = {
+    ## cardinality = 1..inf
+    alias_name[trigger] = alias_match_left[trigger]
+}
+
+### Check if division has this battalion in template
+## scope = unit
+alias[trigger:division_has_battalion_in_template] = <unit>
+
+### Checks if states have divisions
+## scope = country
+alias[trigger:num_divisions_in_states] = {
+    count = int
+    states = {
+        ## cardinality = ~1..inf
+        <state>
+    }
+    ## cardinality = 0..1
+    types = {
+        ## cardinality = ~1..inf
+        <unit>
+    }
+    ## cardinality = 0..1
+    exclude = {
+        ## cardinality = ~1..inf
+        <unit>
+    }
+}
+
+### Checks if states have divisions
+## scope = country
+alias[trigger:num_battalions_in_states] = {
+    count = int
+    states = {
+        ## cardinality = ~1..inf
+        <state>
+    }
+    ## cardinality = 0..1
+    types = {
+        ## cardinality = ~1..inf
+        <unit>
+    }
+    ## cardinality = 0..1
+    exclude = {
+        ## cardinality = ~1..inf
+        <unit>
+    }
+}
+
+### Check if tag has war with major
+## scope = country
+alias[trigger:has_war_with_major] = bool
+
+### Checks if country has war with wargoal against target
+## scope = country
+alias[trigger:has_war_with_wargoal_against] = {
+	target = scope[country]
+	target = enum[country_tags]
+	type = <wargoal>
+}
+
+### Checks if country has war with any wargoal against target
+## scope = country
+alias[trigger:has_war_with_wargoal_against] = scope[country]
+
+### Checks if country has war with any wargoal against target
+## scope = country
+alias[trigger:has_war_with_wargoal_against] = enum[country_tags]
+
+## scope = { character unit_leader }
+alias[trigger:is_hired_as_advisor] = bool
+
+## scope = country
+alias[trigger:has_completed_custom_achievement] = {
+    mod = enum[mod_achievement_id]
+    achievement = <achievement>
+}
+
+#post or during peace conference triggers state
+
+### Checks if the current scope was demilitarised during a current or previously-ended peace conference.
+## scope = state
+alias[trigger:pc_does_state_stack_demilitarized] = bool
+
+### Checks if the current scope was dismantled during a current or previously-ended peace conference.
+## scope = state
+alias[trigger:pc_does_state_stack_dismantled] = bool
+
+#during peace conference triggers state
+
+### Checks if the current scope was claimed by any country during the peace conference.
+## scope = state
+alias[trigger:pc_is_state_claimed] = bool
+
+### Checks if the current scope was claimed by the specified country during the peace conference.
+## scope = state
+alias[trigger:pc_is_state_claimed_by] = scope[country]
+### Checks if the current scope was claimed by the specified country during the peace conference.
+## scope = state
+alias[trigger:pc_is_state_outside_influence_for_winner] = enum[country_tags]
+
+### Checks if the current state is outside of the influence of the specified winner country.
+## scope = state
+alias[trigger:pc_is_state_outside_influence_for_winner] = scope[country]
+### Checks if the current state is outside of the influence of the specified winner country.
+## scope = state
+alias[trigger:pc_is_state_outside_influence_for_winner] = enum[country_tags]
+
+### Compares the amount of turns that have passed during the peace conference with a number.
+## scope = any
+alias[trigger:pc_turn] = int
+
+### Check scope unit strength status 0-1: Example unit_strength < 1
+## scope = unit
+alias[trigger:unit_strength] = variable_field[0..1]
+
+### Check scope unit organization status 0-1: Example unit_organization < 1
+## scope = unit
+alias[trigger:unit_organization] = variable_field[0..1]
+
+### Returns true if this unit's template has the reserves priority
+## scope = unit
+alias[trigger:is_unit_template_reserves] = bool

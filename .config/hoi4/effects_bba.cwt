@@ -1,0 +1,184 @@
+### Enable Balance of Power or update its values
+## scope = country
+alias[effect:set_power_balance] = {
+	id = <balance_of_power>
+	### Whether or not to reset the power balance to the initial value, default = no
+	## cardinality = 0..1
+	set_default = bool
+	### Manually set BOP side to ine defined in balance of power sides. Will keep the last set side if not specified
+	## cardinality = 0..1
+	right_side = value[bop_side]
+	### Manually set BOP side to ine defined in balance of power sides. Will keep the last set side if not specified
+	## cardinality = 0..1
+	left_side = value[bop_side]
+	### if specified will set the value of the power balance, this option will override the effect of set_default so the two options should not be used together. if neither set_default or set_value is specified the current value of the power balance will not change
+	## cardinality = 0..1
+	set_value = float[-1..1]
+}
+
+### Disable specific BOP. Check that it is assigned via has_power_balance first
+## scope = country
+alias[effect:remove_power_balance] = {
+    id = <balance_of_power>
+}
+
+### Add a new side to BOP
+## scope = country
+alias[effect:add_power_balance_side] = {
+	id = <balance_of_power>
+	side = value[bop_side]
+}
+
+### Remove side to BOP
+## scope = country
+alias[effect:remove_power_balance_side] = {
+	id = <balance_of_power>
+	side = value[bop_side]
+}
+
+### Add value to balance of power. Float from -1 to 1, adding 0.25 will change BoP to the right by 25%
+## scope = country
+alias[effect:add_power_balance_value] = {
+	id = <balance_of_power>
+	value = float[-2..2]
+	## cardinality = 0..1
+	tooltip_side = localisation
+}
+
+### Change GFX of one of the BoP sides
+## scope = country
+alias[effect:set_power_balance_gfx] = {
+	id = <balance_of_power>
+	side = value[bop_side]
+	gfx = <spriteType>
+}
+
+### Add modifier to Balance of Power
+## scope = country
+alias[effect:add_power_balance_modifier] = {
+    id = <balance_of_power>
+    modifier = <static_modifier>
+}
+
+### Remove modifier from Balance of Power. Check if it added to BOP with has_power_balance_modifier first
+## scope = country
+alias[effect:remove_power_balance_modifier] = {
+    id = <balance_of_power>
+    modifier = <static_modifier>
+}
+
+### Remove all modifiers from Balance of Power
+## scope = country
+alias[effect:remove_all_power_balance_modifiers] = {
+    id = <balance_of_power>
+}
+
+## scope = unit
+alias[effect:add_random_valid_trait_from_unit] = {
+    character = <character>
+    character = value[character_token]
+	character = value[variable]
+	character = value[event_target]
+	character = value[global_event_target]
+	character = scope[character]
+	character = scope[unit_leader]
+}
+## scope = { country character unit_leader }
+alias[effect:set_can_be_fired_in_advisor_role] = {
+	## cardinality = 0..1
+    character = <character>
+	## cardinality = 0..1
+    character = value[character_token]
+	## cardinality = 0..1
+	character = value[variable]
+	## cardinality = 0..1
+	character = value[event_target]
+	## cardinality = 0..1
+	character = value[global_event_target]
+	## cardinality = 0..1
+	character = scope[character]
+	## cardinality = 0..1
+	slot = enum[allowed_advisor_role]
+	value = bool
+}
+
+## scope = country
+## push_scope = unit
+alias[effect:every_country_division] = {
+	### Apply the effect to this number of randomly selected entities
+	## cardinality = 0..1
+	random_select_amount = int[1..inf]
+	## cardinality = 0..1
+	display_individual_scopes = bool
+    ## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	tooltip = localisation
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## scope = state
+## push_scope = unit
+alias[effect:every_state_division] = {
+	### Apply the effect to this number of randomly selected entities
+	## cardinality = 0..1
+	random_select_amount = int[1..inf]
+	## cardinality = 0..1
+	display_individual_scopes = bool
+    ## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	tooltip = localisation
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## scope = state
+## push_scope = unit
+alias[effect:random_state_division] = {
+    ## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	tooltip = localisation
+	alias_name[effect] = alias_match_left[effect]
+}
+
+### Change divisions in scope to selected template
+## scope = unit
+alias[effect:change_division_template] = {
+	division_template = value[division_template_name]
+}
+
+### Set unit org to a specific value
+## scope = unit
+alias[effect:set_unit_organization] = float
+
+## scope = country
+alias[effect:remove_civil_war_target] = scope[country]
+
+## scope = country
+alias[effect:remove_civil_war_target] = enum[country_tags]
+
+### Destroys the currently-scoped division. 
+## scope = unit
+alias[effect:destroy_unit] = bool
+
+### Add history entry to a unit in scope
+## scope = unit
+alias[effect:add_history_entry] = {
+    key = localisation
+    subject = localisation
+    ### Allow medal award
+    allow = bool
+}
+
+### Add a medal to latest history entry of a unit in scope. Check 'add_history_entry' to create a new entry
+## scope = unit
+alias[effect:add_unit_medal_to_latest_entry] = {
+    unit_medals = <unit_medal>
+}

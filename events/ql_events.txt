@@ -1,0 +1,9 @@
+add_namespace = library
+country_event = {
+    id = library.1
+    title = library.1.t
+    desc = library.1.d
+    option = {
+        name = library.1.o1
+    }
+}

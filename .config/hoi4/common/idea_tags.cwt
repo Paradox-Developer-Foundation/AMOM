@@ -1,0 +1,65 @@
+types = {
+	type[idea_category] = {
+		path = "game/common/idea_tags"
+		skip_root_key = idea_categories
+		subtype[slot] = {
+			## cardinality = 1..inf
+			slot = scalar
+		}
+		subtype[character_slot] = {
+			## cardinality = 1..inf
+			character_slot = scalar
+		}
+		subtype[miltary_spirit] = {
+			type = enum[military_spirit_types]
+		}
+		## only_if_not = { slot character_slot miltary_spirit }
+		subtype[no_slot] = {
+			
+		}
+	}
+}
+
+idea_category = {
+	### Whether the ideas are shown anywhere. Default: no
+	## cardinality = 0..1
+	hidden = bool
+
+	subtype[no_slot] = {
+		## cardinality = 0..1
+		type = national_spirit
+	}
+
+	### Default cost to add ideas of this type
+	## cardinality = 0..1
+	cost = int
+
+	### Default cost to remove ideas of this type, -1 blocks manual removal
+	## cardinality = 0..1
+	removal_cost = int
+
+	## cardinality = 0..1
+	# enum[ledgers] defined in ideas.cwt
+	ledger = enum[ledgers]
+
+	subtype[miltary_spirit] = {
+		type = enum[military_spirit_types]
+		## cardinality = ~1..1
+		politics_tab = bool
+	}
+	subtype[slot] = {
+		## cardinality = 1..inf
+		slot = value_set[idea_slot]
+	}
+	subtype[character_slot] = {
+		## cardinality = 1..inf
+		character_slot = value_set[character_advisor_slot]
+	}
+}
+enums = {
+	enum[military_spirit_types] = {
+		army_spirit
+		navy_spirit
+		air_spirit
+	}
+}

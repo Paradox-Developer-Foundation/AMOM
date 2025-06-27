@@ -1,0 +1,1214 @@
+values = {
+	value[variable] = {
+		# ========================
+		# GLOBAL DYNAMIC VARIABLES
+		# ========================
+
+		### Get date value that can be comparable to other date values.
+		date
+
+		### Current total days.
+		num_days
+
+		### Current year.
+		year
+
+		### (Trigger) Check if the difficulty is above or below specified value 0-2 (difficulty enum). Example: difficulty > 0 (above easy).
+		difficulty
+
+		### (Trigger) Check the global threat value. 0-1 value.
+		threat
+
+		# =========================
+		# COUNTRY DYNAMIC VARIABLES
+		# =========================
+
+		### Weight for an AI attitude attitude_allied against country. Example: GER.ai_attitude_allied_weight@ENG.
+		ai_attitude_allied_weight@enum[country_scope_enum]
+		ai_attitude_allied_weight@enum[country_tags]
+
+		### Weight for an AI attitude attitude_friendly against country. Example: GER.ai_attitude_friendly_weight@ENG.
+		ai_attitude_friendly_weight@enum[country_scope_enum]
+		ai_attitude_friendly_weight@enum[country_tags]
+
+		### Weight for an AI attitude attitude_hostile against country. Example: GER.ai_attitude_hostile_weight@ENG.
+		ai_attitude_hostile_weight@enum[country_scope_enum]
+		ai_attitude_hostile_weight@enum[country_tags]
+
+		### Returns 1 if AI is threatened.
+		ai_attitude_is_threatened
+
+		### Weight for an AI attitude attitude_neutral against country. Example: GER.ai_attitude_neutral_weight@ENG.
+		ai_attitude_neutral_weight@enum[country_scope_enum]
+		ai_attitude_neutral_weight@enum[country_tags]
+
+		### Weight for an AI attitude attitude_outraged against country. Example: GER.ai_attitude_outraged_weight@ENG.
+		ai_attitude_outraged_weight@enum[country_scope_enum]
+		ai_attitude_outraged_weight@enum[country_tags]
+
+		### Weight for an AI attitude attitude_protective against country. Example: GER.ai_attitude_protective_weight@ENG.
+		ai_attitude_protective_weight@enum[country_scope_enum]
+		ai_attitude_protective_weight@enum[country_tags]
+
+		### Weight for an AI attitude attitude_threatened against country. Example: GER.ai_attitude_threatened_weight@ENG.
+		ai_attitude_threatened_weight@enum[country_scope_enum]
+		ai_attitude_threatened_weight@enum[country_tags]
+
+		### Returns 1 if AI wants ally.
+		ai_attitude_wants_ally
+
+		### Returns 1 if AI wants antagonize.
+		ai_attitude_wants_antagonize
+
+		### Returns 1 if AI wants ignore.
+		ai_attitude_wants_ignore
+
+		### Returns 1 if AI wants protect.
+		ai_attitude_wants_protect
+
+		### Returns 1 if AI wants weaken.
+		ai_attitude_wants_weaken
+
+		### How much the AI wants a certain Assets.
+		ai_desire_<resource>
+
+		### AI strategy value activate_crypto against country. Example: GER.ai_strategy_activate_crypto@ENG.
+		ai_strategy_activate_crypto@enum[country_scope_enum]
+		ai_strategy_activate_crypto@enum[country_tags]
+
+		### AI strategy value alliance against country. Example: GER.ai_strategy_alliance@ENG.
+		ai_strategy_alliance@enum[country_scope_enum]
+		ai_strategy_alliance@enum[country_tags]
+
+		### AI strategy value antagonize against country. Example: GER.ai_strategy_antagonize@ENG.
+		ai_strategy_antagonize@enum[country_scope_enum]
+		ai_strategy_antagonize@enum[country_tags]
+
+		### AI strategy value befriend against country. Example: GER.ai_strategy_befriend@ENG.
+		ai_strategy_befriend@enum[country_scope_enum]
+		ai_strategy_befriend@enum[country_tags]
+
+		### AI strategy value conquer against country. Example: GER.ai_strategy_conquer@ENG.
+		ai_strategy_conquer@enum[country_scope_enum]
+		ai_strategy_conquer@enum[country_tags]
+
+		### AI strategy value consider_weak against country. Example: GER.ai_strategy_consider_weak@ENG.
+		ai_strategy_consider_weak@enum[country_scope_enum]
+		ai_strategy_consider_weak@enum[country_tags]
+
+		### AI strategy value contain against country. Example: GER.ai_strategy_contain@ENG.
+		ai_strategy_contain@enum[country_scope_enum]
+		ai_strategy_contain@enum[country_tags]
+
+		### AI strategy value declare_war against country. Example: GER.ai_strategy_declare_war@ENG.
+		ai_strategy_declare_war@enum[country_scope_enum]
+		ai_strategy_declare_war@enum[country_tags]
+
+		### AI strategy value decrypt_target against country. Example: GER.ai_strategy_decrypt_target@ENG.
+		ai_strategy_decrypt_target@enum[country_scope_enum]
+		ai_strategy_decrypt_target@enum[country_tags]
+
+		### AI strategy value dont_defend_ally_borders against country. Example: GER.ai_strategy_dont_defend_ally_borders@ENG.
+		ai_strategy_dont_defend_ally_borders@enum[country_scope_enum]
+		ai_strategy_dont_defend_ally_borders@enum[country_tags]
+
+		### AI strategy value force_defend_ally_borders against country. Example: GER.ai_strategy_force_defend_ally_borders@ENG.
+		ai_strategy_force_defend_ally_borders@enum[country_scope_enum]
+		ai_strategy_force_defend_ally_borders@enum[country_tags]
+
+		### AI strategy value ignore against country. Example: GER.ai_strategy_ignore@ENG.
+		ai_strategy_ignore@enum[country_scope_enum]
+		ai_strategy_ignore@enum[country_tags]
+
+		### AI strategy value ignore_claim against country. Example: GER.ai_strategy_ignore_claim@ENG.
+		ai_strategy_ignore_claim@enum[country_scope_enum]
+		ai_strategy_ignore_claim@enum[country_tags]
+
+		### AI strategy value influence against country. Example: GER.ai_strategy_influence@ENG.
+		ai_strategy_influence@enum[country_scope_enum]
+		ai_strategy_influence@enum[country_tags]
+
+		### AI strategy value invade against country. Example: GER.ai_strategy_invade@ENG.
+		ai_strategy_invade@enum[country_scope_enum]
+		ai_strategy_invade@enum[country_tags]
+
+		### AI strategy value occupation_policy against country. Example: GER.ai_strategy_occupation_policy@ENG.
+		ai_strategy_occupation_policy@enum[country_scope_enum]
+		ai_strategy_occupation_policy@enum[country_tags]
+
+		### AI strategy value prepare_for_war against country. Example: GER.ai_strategy_prepare_for_war@ENG.
+		ai_strategy_prepare_for_war@enum[country_scope_enum]
+		ai_strategy_prepare_for_war@enum[country_tags]
+
+		### AI strategy value protect against country. Example: GER.ai_strategy_protect@ENG.
+		ai_strategy_protect@enum[country_scope_enum]
+		ai_strategy_protect@enum[country_tags]
+
+		### AI strategy value send_volunteers_desire against country. Example: GER.ai_strategy_send_volunteers_desire@ENG.
+		ai_strategy_send_volunteers_desire@enum[country_scope_enum]
+		ai_strategy_send_volunteers_desire@enum[country_tags]
+
+		### AI strategy value support against country. Example: GER.ai_strategy_support@ENG.
+		ai_strategy_support@enum[country_scope_enum]
+		ai_strategy_support@enum[country_tags]
+
+		### Air intel against a target country. example GER.air_intel@ENG.
+		air_intel@enum[country_scope_enum]
+		air_intel@enum[country_tags]
+
+		### KR-specific variable to manage tag ambition areas
+		ambition_area_enum[country_tags]
+
+		### Army experience of a country.
+		army_experience
+
+		### Army intel against a target country. example GER.army_intel@ENG.
+		army_intel@enum[country_scope_enum]
+		army_intel@enum[country_tags]
+
+		# Country-scope
+		### Autonomy of scope country. -1 if not a subject.
+		autonomy_ratio
+
+		### Capital state of the country
+		capital
+		historical_capital_for_country
+
+		### Civilian intel against a target country. example GER.civilian_intel@ENG.
+		civilian_intel@enum[country_scope_enum]
+		civilian_intel@enum[country_tags]
+
+		### Total command power of country.
+		command_power
+
+		### Returns core compliance of target country.
+		core_compliance
+
+		### Returns core resistance of target country.
+		core_resistance
+
+		### Cryptology defense level of a country.
+		cryptology_defense_level
+
+		### Returns the token for current party ideology group.
+		current_party_ideology_group
+
+		### Timeout in days for a specific timed mission, mission type token is defined in target. Example: days_mission_timeout@GER_mefo_bills_mission.
+		days_mission_timeout@<decision.mission>
+
+		### Total decryption speed of a country that is needed.
+		decryption_speed
+
+		### Total encryption strength of a country that is needed.
+		encryption_strength
+
+		### Faction leader of this country's faction.
+		faction_leader
+
+		### Total fuel of country in thousands.
+		fuel_k
+
+		### Gives what ratio of the garrison factor we can support for current template and buffers.
+		garrison_equipment_support_ratio
+		garrison_min_support_ratio
+		garrison_manpower_support_ratio
+
+		### Ideology of the most popular party. Can exclude the ruling party by using @exclude_ruling_party. Example: highest_party_ideology OR highest_party_ideology@exclude_ruling_party
+		highest_party_ideology
+		highest_party_ideology@exclude_ruling_party
+
+		### Popularity size of the most popular party [0.00, 1.00]. Can exclude the ruling party by using @exclude_ruling_party. Example: highest_party_popularity OR highest_party_popularity@exclude_ruling_party
+		highest_party_popularity
+		highest_party_popularity@exclude_ruling_party
+
+		### Host of this country's government in exile.
+		host
+
+		### ID.
+		id
+
+		### Legitimacy of scope country. -1 if not an exile.
+		legitimacy
+
+		### DEPRECATED, MAY OVERFLOW. Total manpower of country.
+		manpower
+
+		### Total manpower of country in thousands.
+		manpower_k
+
+		### DEPRECATED, MAY OVERFLOW. Total available manpower of country.
+		max_available_manpower
+
+		### Total available manpower of country in thousands.
+		max_available_manpower_k
+
+		### DEPRECATED, MAY OVERFLOW. Maximum manpower of country.
+		max_manpower
+
+		### Maximum manpower of country in thousands.
+		max_manpower_k
+
+		### Deployed airforce manpower of country in thousands.
+		deployed_airforce_manpower_k
+
+		### Deployed navy manpower of country in thousands.
+		deployed_navy_manpower_k
+
+		### Deployed army manpower of country in thousands.
+		deployed_army_manpower_k
+
+		### Total deployed manpower of country in thousands.
+		deployed_total_manpower_k
+
+		### Navy experience of a country.
+		navy_experience
+
+		### Navy intel against a target country. example GER.navy_intel@ENG.
+		navy_intel@enum[country_scope_enum]
+		navy_intel@enum[country_tags]
+
+		### Number of armies.
+		num_armies
+
+		### Number of armies in state, state is in target. Example num_armies_in_state@123.
+		num_armies_in_state@<state>
+		num_armies_in_state@scope[state]
+
+		### Number of armies with dominant type, dominant type is defined in target. Example: num_armies_with_type@light_armor.
+		num_armies_with_type@<unit>
+
+		### Number of battalions.
+		num_battalions
+
+		### Number of battalions with sub unit type, sub unit type is defined in target. Example: num_battalions_with_type@light_armor.
+		num_battalions_with_type@<unit>
+
+		### Number of controlled states.
+		num_controlled_states
+
+		### Number of core states.
+		num_core_states
+
+		### Number of deployed planes.
+		num_deployed_planes
+
+		### Number of deployed planes with equipment type. example num_deployed_planes_with_type@fighter.
+		num_deployed_planes_with_type@<equipment>
+
+		### Number of equipment in country. Example num_equipment@infantry_equipment.
+		num_equipment@<equipment>
+
+		### Number of equipment in armies of the country, equipment type token is defined in target. Example num_equipment_in_armies@infantry_equipment.
+		num_equipment_in_armies@<equipment>
+
+		### Number of equipment in armies of the country in thousands, equipment type token is defined in target. Example num_equipment_in_armies_k@infantry_equipment.
+		num_equipment_in_armies_k@<equipment>
+
+		### Number of owned and core states.
+		num_owned_controlled_states
+
+		### Number of owned states.
+		num_owned_states
+
+		### Number of equipment required in armies of the country, equipment type token is defined in target. Example num_target_equipment_in_armies@infantry_equipment.
+		num_target_equipment_in_armies@<equipment>
+
+		### Number of equipment required in armies of the country in thousands, equipment type token is defined in target. Example num_target_equipment_in_armies_k@infantry_equipment.
+		num_target_equipment_in_armies_k@<equipment>
+
+		### Opinion of a country targeted on another one. Example GER.opinion@ENG.
+		opinion@scope[country]
+		opinion@enum[country_tags]
+		opinion@ROOT
+		opinion@FROM
+		opinion@PREV
+		opinion@THIS
+
+		### Returns the original tag of a country.
+		original_tag
+
+		### Master of this subject.
+		overlord
+
+		### Popularity of targeted party. Example party_popularity@democratic. May also target ruling_party.
+		party_popularity@<ideology>
+		party_popularity@ruling_party
+
+		### Popularity of targeted party. Example party_popularity@democratic. May also target ruling_party.
+		party_popularity_100@<ideology>
+		party_popularity_100@ruling_party
+
+		### Total political power of country.
+		political_power
+
+		### Number of surplus resources in country, Assets type is defined in target Assets@steel.
+		resource@<resource>
+
+		### Number of resources consumed by country, Assets type is defined in target resource_consumed@steel.
+		resource_consumed@<resource>
+
+		### Number of resources exported by country, Assets type is defined in target resource_exported@steel.
+		resource_exported@<resource>
+
+		### Number of resources imported by country, Assets type is defined in target resource_imported@steel.
+		resource_imported@<resource>
+
+		### Number of resources produced by country, Assets type is defined in target. Example resource_produced@steel.
+		resource_produced@<resource>
+
+		### Stability of a country.
+		stability
+
+		### (Trigger) Check the ai irrationality value.
+		ai_irrationality
+
+		### (Trigger) Will compare towards the amount of divisions an ai wants to have.
+		ai_wants_divisions
+
+		### (Trigger) Compares the estimated naval strength between the scope country, his allies and his enemies.
+		alliance_naval_strength_ratio
+
+		### (Trigger) Compares the estimated army strength between the scope country, his allies and his enemies.
+		alliance_strength_ratio
+
+		### (Trigger) Checks for amount manpower currently in deployment View. amount_manpower_in_training > 10.
+		amount_manpower_in_deployment_queue
+
+		### (Trigger) Check number of research current research slots. Example amount_research_slots > 2.
+		amount_research_slots
+
+		### (Trigger) Compares the warscore of all wars in a country to see if any fulfils the comparison condition 0-100 - Example: any_war_score > 40.
+		any_war_score
+
+		### (Trigger) Check the amount of casualties a country has suffered in all of it's wars.
+		casualties
+
+		### (Trigger) Check the amount of casualties in thousands a country has suffered in all of it's wars.
+		casualties_k
+
+		### (Trigger) Checks if daily command power increase is more or less that specified value. Example command_power_daily > 1.5.
+		command_power_daily
+
+		### (Trigger) Check if autonomy progress ratio is higher than value. Example: compare_autonomy_progress_ratio > 0.5.
+		compare_autonomy_progress_ratio
+
+		### (Trigger) Checks  conscription ratio of the country compared to target conscription ratio.
+		conscription_ratio
+
+		### (Trigger) Checks convoy threat for a country. Controlled by NAVAL_CONVOY_DANGER defines.
+		convoy_threat
+
+		### (Trigger) Checks the current conscription amount of the country.
+		current_conscription_amount
+
+		### (Trigger) Checks the number of days since the country last capitulated, even if it is no longer capitulated. If it has not ever capitulated, the value is extremely large.
+		days_since_capitulated
+
+		### (Trigger) Checks decryption ratio against a country. Example:  decryption_progress@GER.
+		decryption_progress@enum[country_scope_enum]
+		decryption_progress@enum[country_tags]
+
+		### (Trigger) Compares the estimated navy strength between the scope country and all its enemies.
+		enemies_naval_strength_ratio
+
+		### (Trigger) Compares the estimated army strength between the scope country and all its enemies.
+		enemies_strength_ratio
+
+		### (Trigger) Checks the amount of foreign garrison manpower we have.
+		foreign_manpower
+
+		### (Trigger) Compares the fuel ratio to a variable. Example: fuel_ratio > 0.5.
+		fuel_ratio
+
+		### (Trigger) Checks the amount of manpower needed by garrisons
+		garrison_manpower_need
+
+		### (Trigger) Compare if the country has added above or below the specified amount of tension.
+		has_added_tension_amount
+
+		### (Trigger) Checks the collaboration in a target country with our currently scoped country. Example has_collaboration@GER.
+		has_collaboration@enum[country_scope_enum]
+		has_collaboration@enum[country_tags]
+
+		### (Trigger) Check scope country legitimacy 0-100: Example has_legitimacy < 60.
+		has_legitimacy
+
+		### (Trigger) Check amount of manpower.
+		has_manpower
+
+		### (Trigger) Check amount of political power.
+		has_political_power
+
+		### (Trigger) Check value of stability 0-1. Example has_stability < 0.6.
+		has_stability
+
+		### (Trigger) Check value of war_support 0-1. Example has_war_support < 0.6.
+		has_war_support
+
+		### (Trigger) Checks researched land doctrine level.
+		land_doctrine_level
+
+		### (Trigger) Number of available manpower per factory the country has. Excluding dockyards. Example manpower_per_military_factory < 1000.
+		manpower_per_military_factory
+
+		### (Trigger) check how dangerous enemy mines are for a country. Controlled by NAVAL_MINE_DANGER defines.
+		mine_threat
+
+		### (Trigger) Will compare towards the amount of divisions a country has control over, if strength matters use has_army_size.
+		network_national_coverage@enum[country_scope_enum]
+		network_national_coverage@enum[country_tags]
+
+		### (Trigger) Will compare towards the amount of divisions a country has control over, if strength matters use has_army_size.
+		num_divisions
+
+		### (Trigger) Compares the number of members in the faction for the current country. Example num_faction_members > 10.
+		num_faction_members
+
+		### (Trigger) Checks the amount of fake intel divisions a country has control over.
+		num_fake_intel_divisions
+
+		### (Trigger) Checks the number of operatives a country can recruit right now.
+		num_free_operative_slots
+
+		### (Trigger) Check the number of states occupied by nation.
+		num_occupied_states
+
+		### (Trigger) Check amount of available civilian factories.
+		num_of_available_civilian_factories
+
+		### (Trigger) Check amount of available military factories.
+		num_of_available_military_factories
+
+		### (Trigger) Check amount of available naval factories.
+		num_of_available_naval_factories
+
+		### (Trigger) Check amount of civilian factories.
+		num_of_civilian_factories
+
+		### (Trigger) Check amount of civilian factories available for a new project to use.
+		num_of_civilian_factories_available_for_projects
+
+		### (Trigger) Check the number of factories in controlled states excluding any gained or lost through trade, relations, modifiers etc.
+		num_of_controlled_factories
+
+		### (Trigger) Check amount of controlled states.
+		num_of_controlled_states
+
+		### (Trigger) Check amount of total factories.
+		num_of_factories
+
+		### (Trigger) Check amount of military factories.
+		num_of_military_factories
+
+		### (Trigger) Check amount of naval factories.
+		num_of_naval_factories
+
+		### (Trigger) Check amount of nukes.
+		num_of_nukes
+
+		### (Trigger) Checks the number of operatives the country controls.
+		num_of_operatives
+
+		### (Trigger) Checks the number of available operative slots a country has.
+		num_operative_slots
+
+		### (Trigger) check the number of factories in owned states excluding any gained or lost through trade, relations, modifiers etc.
+		num_of_owned_factories
+
+		### (Trigger) Number of researched technologies.
+		num_researched_technologies
+
+		### (Trigger) Check the number of subjects of nation.
+		num_subjects
+
+		### (Trigger) Checks how many groups a nation is a member of.
+		num_tech_sharing_groups
+
+		### (Trigger) Check number of research slots at start of game.
+		original_research_slots
+
+		### (Trigger) Checks if daily political power increase is more or less that specified value. Example political_power_daily > 1.5.
+		political_power_daily
+
+		### (Trigger) Check the value of political power daily growth. Example: political_power_growth > 0.
+		political_power_growth
+
+		### (Trigger) Check if a country is close to surrendering.
+		surrender_progress
+
+		### (Trigger) Checks the target conscription amount of the country.
+		target_conscription_amount
+
+		### (Trigger) Total constructions of air_base
+		total_constructed_air_base
+		### (Trigger) Total constructions of anti_air
+		total_constructed_anti_air
+		### (Trigger) Total constructions of civilian_factory
+		total_constructed_civilian_factory
+		### (Trigger) Total constructions of dockyard
+		total_constructed_dockyard
+		### (Trigger) Total constructions of fuel_silo
+		total_constructed_fuel_silo
+		### (Trigger) Total constructions of infrastructure
+		total_constructed_infrastructure
+		### (Trigger) Total constructions of land_fort
+		total_constructed_land_fort
+		### (Trigger) Total constructions of military_factory
+		total_constructed_military_factory
+		### (Trigger) Total constructions of naval_fort
+		total_constructed_naval_fort
+		### (Trigger) Total constructions of nuclear_reactor
+		total_constructed_nuclear_reactor
+		### (Trigger) Total constructions of other
+		total_constructed_other
+		### (Trigger) Total constructions of port
+		total_constructed_port
+		### (Trigger) Total constructions of radar
+		total_constructed_radar
+		### (Trigger) Total constructions of refinery
+		total_constructed_refinery
+		### (Trigger) Total constructions of rocket_site
+		total_constructed_rocket_site
+		### (Trigger) Total constructions of supply_node
+		total_constructed_supply_node
+		### (Trigger) Total produced equipment of type
+		total_equipment_produced_
+		### (Trigger) Total produced equipment of typeair_transport
+		total_equipment_produced_air_transport
+		### (Trigger) Total produced equipment of typeamphibious
+		total_equipment_produced_amphibious
+		### (Trigger) Total produced equipment of typeanti_air
+		total_equipment_produced_anti_air
+		### (Trigger) Total produced equipment of typeanti_tank
+		total_equipment_produced_anti_tank
+		### (Trigger) Total produced equipment of typearmor
+		total_equipment_produced_armor
+		### (Trigger) Total produced equipment of typeartillery
+		total_equipment_produced_artillery
+		### (Trigger) Total produced equipment of typecapital_ship
+		total_equipment_produced_capital_ship
+		### (Trigger) Total produced equipment of typecarrier
+		total_equipment_produced_carrier
+		### (Trigger) Total produced equipment of typecas
+		total_equipment_produced_cas
+		### (Trigger) Total produced equipment of typeconvoy
+		total_equipment_produced_convoy
+		### (Trigger) Total produced equipment of typefighter
+		total_equipment_produced_fighter
+		### (Trigger) Total produced equipment of typeflame
+		total_equipment_produced_flame
+		### (Trigger) Total produced equipment of typefloating_harbor
+		total_equipment_produced_floating_harbor
+		### (Trigger) Total produced equipment of typeheavy_fighter
+		total_equipment_produced_heavy_fighter
+		### (Trigger) Total produced equipment of typeinfantry
+		total_equipment_produced_infantry
+		### (Trigger) Total produced equipment of typeinterceptor
+		total_equipment_produced_interceptor
+		### (Trigger) Total produced equipment of typemaritime_patrol_plane
+		total_equipment_produced_maritime_patrol_plane
+		### (Trigger) Total produced equipment of typemechanized
+		total_equipment_produced_mechanized
+		### (Trigger) Total produced equipment of typemissile
+		total_equipment_produced_missile
+		### (Trigger) Total produced equipment of typemotorized
+		total_equipment_produced_motorized
+		### (Trigger) Total produced equipment of typenaval_bomber
+		total_equipment_produced_naval_bomber
+		### (Trigger) Total produced equipment of typerailway_gun
+		total_equipment_produced_railway_gun
+		### (Trigger) Total produced equipment of typerocket
+		total_equipment_produced_rocket
+		### (Trigger) Total produced equipment of typescout_plane
+		total_equipment_produced_scout_plane
+		### (Trigger) Total produced equipment of typescreen_ship
+		total_equipment_produced_screen_ship
+		### (Trigger) Total produced equipment of typestrategic_bomber
+		total_equipment_produced_strategic_bomber
+		### (Trigger) Total produced equipment of typesubmarine
+		total_equipment_produced_submarine
+		### (Trigger) Total produced equipment of typesuicide
+		total_equipment_produced_suicide
+		### (Trigger) Total produced equipment of typesupport
+		total_equipment_produced_support
+		### (Trigger) Total produced equipment of typetactical_bomber
+		total_equipment_produced_tactical_bomber
+		### (Trigger) Total produced equipment of typetrain
+		total_equipment_produced_train
+
+		### (Trigger) Checks country's total peace conference score. Only usable if the country is on the winning side. Example: CZE = { pc_current_score > 400 }
+		pc_current_score
+
+		### (Trigger) Checks country's total peace conference score. Only usable if the country is on the winning side. Example: CZE = { pc_total_score > 400 }
+		pc_total_score
+
+		# =======================
+		# STATE DYNAMIC VARIABLES
+		# =======================
+
+		controller
+		owner
+
+		### Military factory level in the state.
+		arms_factory_level
+
+		### Building level of a building with type, uses target as building type. Example building_level@arms_factory.
+		building_level@<building>
+
+		### Damaged building level of a building with type, uses target as building type. example damaged_building_level@arms_factory.
+		damaged_building_level@<building>
+
+		### Distance to another state, uses target as another state. Example: 123.distance_to@124.
+		distance_to@<state>
+		distance_to@scope[state]
+
+		### Civilian factor level in the state.
+		industrial_complex_level
+
+		### Infrastructure level in the state.
+		infrastructure_level
+
+		### Non damaged building level of a building with type, uses target as building type. example non_damaged_building_level@arms_factory.
+		non_damaged_building_level@<building>
+
+		### (Trigger) Checks the current compliance level.
+		compliance
+
+		### (Trigger) Checks the current compliance speed.
+		compliance_speed
+
+		### (Trigger) Checks the days since last strategic bombing. Example days_since_last_strategic_bombing < 10.
+		days_since_last_strategic_bombing
+
+		### Checks the current resistance level.
+		resistance
+
+		### Checks the current resistance speed.
+		resistance_speed
+
+		### Checks the current resistance target.
+		resistance_target
+
+		### Checks the current resistance target value that is not modifier by law.
+		resistance_target_without_law
+
+		### (Trigger) Checks for state strategic value.
+		state_and_terrain_strategic_value
+
+		### (Trigger) Check the population in the state.
+		state_population
+
+		### (Trigger) Check the population in the state in thousands (use to avoid variable overflows).
+		state_population_k
+
+		### (Trigger) Checks for state strategic value.
+		state_strategic_value
+
+		### Sabotaged Assets in state.
+		sabotaged_<resource>
+
+		### (Trigger) Uncapped_resistance_target temp variable can be used for getting resistance that that is not capped to 0-100
+		uncapped_resistance_target
+
+		### Occupier tag
+		occupier
+
+		### Occupied tag
+		occupied
+
+		# =============================
+		# UNIT LEADER DYNAMIC VARIABLES
+		# =============================
+
+		### Attack level of the leader.
+		army_attack_level
+
+		### Defense level of the leader.
+		army_defense_level
+
+		### Attack level of the leader.
+		attack_level
+
+		### Average stats of unit leader.
+		average_stats
+
+		### Average progress of all combats.
+		avg_combat_status
+
+		### Average progress of defensive combats.
+		avg_defensive_combat_status
+
+		### Average progress of offensive combats.
+		avg_offensive_combat_status
+
+		### Average planning ratio of all units.
+		avg_unit_planning_ratio
+
+		### Average unit acclimatization for a specific climate, acclimatization type is defined in target. Example avg_units_acclimation@cold_climate.
+		avg_units_acclimation@<acclimatization>
+
+		### Coordination level of the leader.
+		coordination_level
+
+		### Defense level of the leader.
+		defense_level
+
+		### 1 if leader has orders group, zero otherwise.
+		has_orders_group
+
+		### Rate at which intel is extracted from this operative by an enemy country.
+		intel_yield_factor_on_capture
+
+		### Logistics level of the leader.
+		logistics_level
+
+		### Maneuvering level of the leader.
+		maneuvering_level
+
+		### Number of units with armored dominant type.
+		num_armored
+
+		### Number of units with artillery dominant type.
+		num_artillery
+
+		### Number of assigned traits the leader has.
+		num_assigned_traits
+
+		### Number of basic traits a leader has.
+		num_basic_traits
+
+		### Number of battle plans of unit leader.
+		num_battle_plans
+
+		### Number of units with cavalry dominant type.
+		num_cavalry
+
+		### Number of units with infantry dominant type.
+		num_infantry
+
+		### Number of maximum assignable traits a leader can have.
+		num_max_traits
+
+		### Number of units with mechanized dominant type.
+		num_mechanized
+
+		### Number of units with motorized dominant type.
+		num_motorized
+
+		### Number of personality traits a leader has.
+		num_personality_traits
+
+		### Number of units with rocket dominant type.
+		num_rocket
+
+		### Number of ships controlled by leader.
+		num_ships
+
+		### Number of ships controlled by leader, ship type is defined in target. Example num_ships_with_type@carrier.
+		num_ships_with_type@<unit>
+
+		### Number of units with special dominant type.
+		num_special
+
+		### Number of status traits a leader has.
+		num_status_traits
+
+		### Number of equipment required in army of a leader, equipment type token is defined in target. Example num_target_equipment@infantry_equipment.
+		num_target_equipment@<equipment>
+
+		### Number of terrain traits a leader has.
+		num_terrain_traits
+
+		### Number of traits a leader has.
+		num_traits
+
+		### Number of units controlled by leader.
+		num_units
+
+		### Number of units currently passing through a river.
+		num_units_crossing_river
+
+		### Number of units in defensive combats.
+		num_units_defensive_combats
+
+		### Number of units that are defensively fighting on a terrain, terrain type is defined as target. Example num_units_defensive_combats_on@plains.
+		num_units_defensive_combats_on@<terrain>
+		num_units_defensive_combats_on@fort
+		num_units_defensive_combats_on@night
+		num_units_defensive_combats_on@amphibious
+
+		### Number of units current fighting.
+		num_units_in_combat
+
+		### Number of units controlled by leader in state, state is in target. Example num_units_in_state@123.
+		num_units_in_state@<state>
+		num_units_in_state@scope[state]
+
+		### Number of units in offensive combats.
+		num_units_offensive_combats
+
+		### Number of units that are offensively fighting against a terrain, terrain type is defined as target. Example num_units_offensive_combats_against@plains.
+		num_units_offensive_combats_against@<terrain>
+		num_units_offensive_combats_against@fort
+		num_units_offensive_combats_against@night
+		num_units_offensive_combats_against@amphibious
+
+		### Number of units that are on an acclimatization required location, acclimatization type is defined in target. Example num_units_on_climate@hot_climate.
+		num_units_on_climate@<acclimatization>
+
+		### Number of units with dominant type controlled by leader, dominant type is defined in target. Example: num_units_with_type@light_armor.
+		num_units_with_type@<unit>
+
+		### The country location the operative is assigned. 0 if it is not assigned to a country.
+		operation_country
+
+		### The state location the operative is assigned. 0 if it is not assigned to a state
+		operation_state
+
+		### Returns the operation token the operative is assigned.
+		operation_type
+
+		### Returns the country tag that captured the operative.
+		operative_captor
+
+		### The chance this operative has to be captured, taking into account the country it is operating for and the country it is operating against.
+		own_capture_chance_factor
+
+		### The time factor applied to the status "forced into hiding". Takes into account the country it is operating for and the country it is operating against.
+		own_forced_into_hiding_time_factor
+
+		### The time factor applied to the status "harmed". Takes into account the country it is operating for and the country it is operating against.
+		own_harmed_time_factor
+
+		### Planning level of the leader.
+		planning_level
+
+		### Skill level of the leader.
+		skill_level
+
+		### Sum of terrain modifiers of each army's location, terrain type is defined in target. Example sum_unit_terrain_modifier@sickness_chance.
+		sum_unit_terrain_modifier@enum[terrain_modifiers]
+
+		### Ratio of units that are ready for plan.
+		unit_ratio_ready_for_plan
+
+		### (Trigger) Compares attack skill level of a unit leader. Example attack_skill_level > 5.
+		attack_skill_level
+
+		### (Trigger) Compares defense skill level of a unit leader. Example defense_skill_level > 5.
+		defense_skill_level
+
+		### (Trigger) Compares logistics skill level of a unit leader. Example logistics_skill_level > 5.
+		logistics_skill_level
+
+		### (Trigger) Compares planning skill level of a unit leader. Example planning_skill_level > 5.
+		planning_skill_level
+
+		### (Trigger) Compare leader skill levels.
+		skill
+
+		### Power balance value.
+		power_balance_value
+
+		# ========================
+		# DATABASE DYNAMIC VARIABLES
+		# ========================
+		mtth:<mtth>
+
+		# ========================
+		# RANDOM DYNAMIC VARIABLES
+		# ========================
+		random
+		ai_random
+
+		# ========================
+		# EFFECT/TRIGGER DEFAULT VARIABLES
+		# ========================
+
+		### Default name of value temp variable used in loop effects and triggers.
+		v
+		### Default name of index temp variable used in loop effects and triggers.
+		i
+		### Default name of break temp variable used in loop effects and triggers.
+		break
+
+		# ========================
+		# ARRAY VARIABLES
+		# ========================
+
+		# Global arrays
+		### Array of all countries (including non existing)
+		countries
+
+		### Array of objects in ideology_groups database.
+		ideology_groups
+
+		### Array of major powers.
+		majors
+
+		### Array of objects in operations database.
+		operations
+
+		### Array of objects in technology database.
+		technology
+
+		# Country dynamic variables
+		### Array of allies (faction members).
+		allies
+
+		### Array of all army leaders of a country.
+		army_leaders
+
+		### Array of controlled states.
+		controlled_states
+
+		### Array of core states.
+		core_states
+
+		### Array of enemies at war with.
+		enemies
+
+		### Array of enemies at war with with allies.
+		enemies_of_allies
+
+		### Array of governments in exile this country hosts.
+		exiles
+
+		### Array of faction members.
+		faction_members
+
+		### Array of all navy leaders of a country.
+		navy_leaders
+
+		### Array of country's neighbors.
+		neighbors
+
+		### Array of country's neighbors to owned states.
+		neighbors_owned
+
+		### Array of occupied countries.
+		occupied_countries
+
+		### Array of all operatives of a country.
+		operatives
+
+		### Array owned and core states.
+		owned_controlled_states
+
+		### Array of owned states.
+		owned_states
+
+		### Array of potential and actual enemies.
+		potential_and_current_enemies
+
+		### Array of researched techs
+		researched_techs
+
+		### Array of subjects.
+		subjects
+
+		### Array of subjects of a tag.
+		subject_countries@enum[country_scope_enum]
+		subject_countries@enum[country_tags]
+
+		### Array of states onwned by subjects of a tag.
+		subject_states@enum[country_scope_enum]
+		subject_states@enum[country_tags]
+
+		### Array with country list scores
+		country_list_scores
+		
+		### Sorted country array
+		sorted_country_list
+
+		#State dynamic variables
+		### Array of countries with cores on the scope state.
+		core_countries
+
+		# Character variables
+		### Variable used in on_actions
+		character
+
+		### Variable to access current country leader
+		country_leader
+
+		### Variable to access current theorist
+		theorist
+
+		### Variable to access current army chief
+		army_chief
+
+		### Variable to access current navy chief
+		navy_chief
+
+		### Variable to access current air chief
+		air_chief
+
+		### KR-specifc variables
+		is_in_coalition_with_@token:<ideology>
+		preparing_for_war_with_scope[country]
+		preparing_for_war_with_enum[country_tags]
+
+		# ========================
+		# MIO VARIABLES
+		# ========================
+		### Research bonus of the military industrial organization when assigned to a research slot
+		research_bonus
+
+		### Size of the military industrial organization
+		size
+
+		### Number of tasks the military industrial organization is currently assigned to
+		number_of_currently_assigned_tasks
+
+		### Funds of the military industrial organization
+		funds
+
+		### Maximum task capacity of the military industrial organization
+		max_task_capacity
+
+		### Number of unlocked traits of the military industrial organization
+		number_of_unlocked_traits
+
+		### Number of unused trait points of the military industrial organization
+		number_of_unused_trait_points
+
+
+		#### wuw patch variables
+
+		### total produced equipment of typecrossing_support_vehicle
+		total_equipment_produced_crossing_support_vehicle
+
+		###  Total produced equipment of typearmored_recovery_vehicle
+		total_equipment_produced_armored_recovery_vehicle
+
+		### calculates the number of civilian factories on core states of current country scope, on those states that are under control of @Tag <Tag | ROOT | my_var> example num_of_civilian_factories_in_cores@GER
+		num_of_civilian_factories_in_cores@scope[country]
+		num_of_civilian_factories_in_cores@enum[country_tags]
+
+		### calculates the number of civilian factories on core states of current country scope, on those states that are under control of @Tag  <Tag | ROOT | my_var> example num_of_military_factories_in_cores@GER
+		num_of_military_factories_in_cores@scope[country]
+		num_of_military_factories_in_cores@enum[country_tags]
+		
+		### calculates the number of civilian factories on core states of current country scope, on those states that are under control of @Tag  <Tag | ROOT | my_var> example num_of_naval_factories_in_cores@my_var
+		num_of_naval_factories_in_cores@scope[country]
+		num_of_naval_factories_in_cores@enum[country_tags]
+		
+		### Total produced equipment of typesam_missile
+		total_equipment_produced_sam_missile
+		
+		### Total constructions of gun_emplacement
+		total_constructed_gun_emplacement
+		
+		### Total produced equipment of typeclearance_vehicle
+		total_equipment_produced_clearance_vehicle
+		
+		### Total produced equipment of typeballistic_missile
+		total_equipment_produced_ballistic_missile
+		
+		### Total produced equipment of typeland_cruiser
+		total_equipment_produced_land_cruiser
+		
+		### Total produced equipment of typeemplacement_gun_ammo
+		total_equipment_produced_emplacement_gun_ammo
+		
+		### Total produced equipment of typemissile_launcher
+		total_equipment_produced_missile_launcher
+		
+		### Total produced equipment of typenuclear_missile
+		total_equipment_produced_nuclear_missile
+
+		### total number of nukes that are currently ready to be dropped
+		num_nukes_being_dropped
+		
+		### number of nukes left to drop during this game tick (only useful in-between nuke drops, like in on_nuke_drop on-action, for example)
+		num_nukes_left_to_drop
+		
+		#Special project scoped variables:
+		### State that the project is researched in
+		facility_state
+		### The province that the project is researched in
+		facility_province_id
+		### The scientist that researches the project
+		scientist
+		
+		# ========================
+		# RAID VARIABLES
+		# ========================
+		actor_country
+		victim_country
+		target_state
+		target_province
+		
+		# end of wuw
+
+		###  TO be sorted
+		### global
+		### An array of controller countries for each province. In this case, the province ID serves as the index: the controller of province 1234 is province_controllers^1234. 
+		province_controllers
+		### Every state that exists in the game. Array
+		states
+		### Checks turn number in PC.\nExample:\npc_turn > 20
+		pc_turn
+		### The current daily change in the value of the balance of power. Can be targeted @ITA_power_balance
+		power_balance_daily_change
+		power_balance_daily_change@<balance_of_power>
+		### The current weekly change in the value of the balance of power. 
+		power_balance_weekly_change
+		power_balance_weekly_change@<balance_of_power>
+		### check amount of gained career points
+		num_of_career_profile_points
+		### Maximum fuel of country in thousands. 
+
+		### country scoped
+		max_fuel_k
+		### The number of upgrade done in the intelligence agency. 
+		agency_upgrade_number
+		### The current weekly change in power balance. 
+		power_balance_weekly
+		### Air experience that the country has. 
+		air_experience
+		### The remaining amount of days for a completed decision before it gets removed. 
+		days_decision_timeout@<decision.timed>
+		### The malus from bombing towards war support on the scale from 0 to 1. 
+		has_bombing_war_support
+		##The current daily change in power balance. 
+		power_balance_daily
+		### Amount of supply nodes. 
+		num_of_supply_nodes
+		### The malus from casualties towards war support on the scale from 0 to 1. 
+		has_casualties_war_support
+		### The malus from sunk convoys towards war support on the scale from 0 to 1. 
+		has_convoys_war_support
+		### returns an array with the currently hired high command of the country
+		high_command
+		### returns an array with the currently hired political advisors of the country
+		political_advisor
+		### Check number of months the country has been at war
+		longest_war_length
+
+		### unit_leader_scoped
+		### Number of order groups assigned to the unit leader. 
+		num_orders_groups
+
+
+		# ========================
+		# MODIFIER VARIABLES
+		# ========================
+
+		### Value of a modifier stored in country/state/mio modifier, modifier token is defined in target. Example modifier@weekly_manpower.
+		modifier@enum[general_modifiers_enum]
+
+		### Value of a modifier stored in unit modifier, modifier token is defined in target. Example unit_modifier@army_attack_factor.
+		unit_modifier@enum[unit_modifiers_enum]
+
+		### Value of a modifier stored in leader modifier, modifier token is defined in target. Example leader_modifier@navy_max_range.
+		leader_modifier@enum[leader_modifiers_enum]
+
+		### Custom modifier accessed via variable
+		modifier@<modifier_definition>
+
+		## constant hacky
+		constant:<script_constant>
+	}
+}

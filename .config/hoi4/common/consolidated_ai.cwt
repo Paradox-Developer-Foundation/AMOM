@@ -1,0 +1,479 @@
+types = {
+	type[ai_area] = {
+		path = "game/common/ai_areas"
+		skip_root_key = areas
+	}
+	type[ai_focus] = {
+		path = "game/common/ai_focuses"
+		subtype[research] = {
+			research = {
+
+			}
+		}
+		subtype[national_focuses] = {
+			ai_national_focuses = {
+				## cardinality = 0..inf
+				<focus>
+				## cardinality = 0..inf
+				<shared_focus>
+			}
+		}
+	}
+	type[ai_peace] = {
+		path = "game/common/ai_peace"
+	}
+	type[ai_template] = {
+		path = "game/common/ai_templates"
+	}
+	type[ai_equipment_design_group] = {
+		path = "game/common/ai_equipment"
+	}
+	type[ai_equipment_design] = {
+		path = "game/common/ai_equipment"
+		skip_root_key = any
+		subtype[design] = {
+			target_variant = {
+
+			}
+		}
+	}
+}
+	# complex_enum[ai_equipment_design] = {
+	# 	path = "game/Common/ai_equipment"
+	# 	name = {
+	# 		enum_name = {
+	# 			target_variant = {
+	# 			}
+	# 		}
+	# 	}
+	# }
+
+ai_area = {
+	## cardinality = 0..1
+	continents = {
+		## cardinality = 1..inf
+		enum[continents]
+	}
+	## cardinality = 0..1
+	strategic_regions = {
+		## cardinality = ~1..inf
+		<strategic_region>
+	}
+}
+
+ai_focus = {
+	subtype[research] = {
+		research = {
+			## cardinality = 0..inf
+			enum[ai_research_areas] = float
+			## cardinality = 0..inf
+			enum[tech_category] = float
+		}
+	}
+	subtype[national_focuses] = {
+		ai_national_focuses = {
+			## cardinality = 0..inf
+			<focus>
+			## cardinality = 0..inf
+			<shared_focus>
+		}
+	}
+
+}
+
+## replace_scope = { this = country root = country from = country }
+ai_peace = {
+	enable = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	annex_randomness = int
+	liberate_randomness = int
+	puppet_randomness = int
+	take_states_randomness = int
+	force_government_randomness = int
+
+	## cardinality = 0..1
+	build_temp_vars = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	# ROOT = Taker, FROM = Giver
+	annex = {
+		## cardinality = 0..1
+		enum[base_factor] = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+
+	# ROOT = Taker, FROM = Liberated
+	liberate = {
+		## cardinality = 0..1
+		enum[base_factor] = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+
+	# ROOT = Taker, FROM = Giver
+	puppet = {
+		## cardinality = 0..1
+		enum[base_factor] = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+
+	# ROOT = Taker, FROM = Giver
+	puppet_all = {
+		## cardinality = 0..1
+		enum[base_factor] = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+
+	## replace_scope = { this = state root = state from = country fromfrom = country}
+	# ROOT = STATE, FROM = Taker, FROM.FROM = Giver
+	puppet_state = {
+		## cardinality = 0..1
+		enum[base_factor] = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+
+	## replace_scope = { this = country root = country from = state }
+	# ROOT = Taker, FROM = State
+	take_states = {
+		## cardinality = 0..1
+		enum[base_factor] = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+
+	# ROOT = Taker, FROM = Giver
+	force_government = {
+		## cardinality = 0..1
+		enum[base_factor] = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+ai_template = {
+
+	# Determines which countries will use this role-level template entry. Both 'blocked_for' and 'available_for' are possible to use. Use one or the other, if you use neither or both, the resulting behavior is undefined. (These two may be replaced by 'allowed' or something similar in the future.)
+	# Generally you want to make sure that each country has max one role-level template entry targeting a role. So if you add custom AI templates for e.g. Germany you should make sure that only Germany is allowed for it, and you should also block Germany from using the generic AI templates for the same role.
+	## cardinality = 0..1
+	blocked_for = {
+		## cardinality = ~1..inf
+		enum[country_tags]
+	}
+	## cardinality = 0..1
+	available_for = {
+		## cardinality = ~1..inf
+		enum[country_tags]
+	}
+
+	# The role token that this role-level template entry targets. These tokens are defined by script and are targeted by the 'role_ratio' AI strategy.
+	role = value_set[ai_template_roles]
+
+	# The role-level upgrade prio is used for weighted-random selection when the AI chooses which role to upgrade templates for. Set it to zero to prevent the AI from spending XP on upgrading templates for this role.
+	# Example: If three role-level templates [A, B, C] have upgrade prio [1, 2, 1] respectively, then the probabilities for upgrading each template is [25%, 50%, 25%] respectively.
+	upgrade_prio = {
+		enum[base_factor] = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+
+	## Below are the actual target templates belonging to this role ##
+	# In this example, the AI will first try to reach a 6-inf (+support) template, before upgrading it to a 9-inf 2-arty (+support) template.
+	# Since the 'upgrade_prio' is higher for the first template, that one will be targeted. And when the match score is good enough it will use the 'replace_with' to switch over to the larger template.
+	# If two target templates have the same 'upgrade_prio', the first one will be preferred (so order matters in those cases).
+
+	# Target template 1 (the smaller infantry template)
+	## cardinality = 0..inf
+	scalar = {
+
+		# Optional: Determines the reinforcement prio of the resulting template. For example, garrison templates should use 0 (low prio) while elite templates should use 2 (high prio). Default 1 (normal prio).
+		## cardinality = 0..1
+		reinforce_prio = int
+
+		# Optional: Determines whether to use a custom icon for resulting template.
+		## cardinality = 0..1
+		custom_icon = int
+
+		# Optional: Specifies the division name group to use. By default uses the name group of the template "branched off" from.
+		## cardinality = 0..1
+		division_names_group = <division_name>
+
+		# The priority of this target template. This is used to determine (deterministically, no randomness involved) which of the target templates is the "currently targeted template".
+		upgrade_prio = {
+			enum[base_factor] = float
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
+
+		# Optional: Whether to evaluate this target template at all. Trigger with country scope. If false, the AI will pretend this target template doesn't exist.
+		## cardinality = 0..1
+		## replace_scope = { this = country root = country }
+		enable = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+
+		# Optional: Whether to allow upgrading divisions in the field. Trigger with country scope. If false, the AI will not field-upgrade divisions matching this target template. If true, the AI will consider field-upgrading divisions matching this target template to the target template defined by 'replace_with' (assuming they have enough manpower and equipment for it).
+		## cardinality = 0..1
+		can_upgrade_in_field = {
+			## replace_scope = { this = country root = country }
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+
+		# The "meat" of the target template: the actual template contents.
+		target_template = {
+
+			# The desired support companies. The AI will try to add them to the template if allowed by research etc.
+			## cardinality = 0..1
+			support = {
+				## cardinality = 0..5
+				<unit> = int[0..4]
+			}
+
+			# The desired line regiments. The AI will try to add them to the template if allowed by research etc.
+			regiments = {
+				## cardinality = 1..25
+				<unit> = int[0..25]
+			}
+
+		}
+
+
+		## Optional replace-with chain: If the match score is at least 'replace_at_match', then replace the currently targeted template with 'replace_with', as long as the match score between best matching template and the next target template is at least 'target_min_match'.
+
+		# Optional: Match score of this target template.
+		## cardinality = 0..1
+		replace_at_match = float
+
+		# Optional: Other target template to replace currently targeted template with. Also affects fielded divisions when upgrading in the field.
+		## cardinality = 0..1
+		replace_with = enum[ai_templates]
+
+		# Optional: Match score between the best matching template and the target template defined by 'replace_with' has to be at least this high in order for the switch to happen. Might be deprecated/changed in the future.
+		## cardinality = 0..1
+		target_min_match = float
+	}
+
+}
+
+ai_equipment_design_group = {
+	### naval category is supported from version 1.6.0, and land category from version 1.11.0
+	category = enum[equipment_categories]
+
+	### Exclusionary list of countries that will not use this design group.
+	## cardinality = 0..1
+	blocked_for = {
+		## cardinality = ~1..inf
+		enum[country_tags]
+	}
+
+	### Inclusionary list of countries that will use this design group. If this list is empty, all countries not in the block list will be allowed. If this list is not empty, only countries that are in this list and not in the blocked list will be allowed.
+	## cardinality = 0..1
+	available_for = {
+		## cardinality = ~1..inf
+		enum[country_tags]
+	}
+
+	### List of roles that this design group can be used for. AI will attempt to design and produce equipment to satisfy all roles that it can. So it will try to actively use one design per role for new production and upgrading/refitting. Roles here are dynamically generated and should work with role_ratio.
+	roles = {
+		value_set[ai_equipment_roles]
+	}
+
+	### Base priority for creating a design in this group or for creating or upgrading equipment to use one of these designs. A higher number means higher priority.
+	priority = {
+		## cardinality = 0..1
+		enum[base_factor] = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+
+	### One or more specifications of designs belonging to this design group.
+	## cardinality = 1..inf
+	<ai_equipment_design.design> = {
+		### Further priority for creating this design specifically or for creating or upgrading equipment to use this design.
+		priority = {
+			## cardinality = 0..1
+			enum[base_factor] = float
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
+
+		## cardinality = 0..1
+		name = scalar
+
+		## cardinality = 0..1
+		role_icon_index = int
+
+		### List of triggers that must all be true for the design to be usable; true by default if empty or missing.
+		## cardinality = 0..1
+		enable = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+
+		### Not sure what it does, possibly hides it for players?
+		## cardinality = 0..1
+		visible = bool
+
+		## cardinality = 0..1
+		### Specifications about how a matching equipment variant should be designed.
+		target_variant = {
+			### An additional weight indicating how much the particular design is worth, if it matches.
+			## cardinality = 0..1
+			match_value = float
+
+			### The equipment archetype or equipment type that the variant must use to match.
+			type = <equipment>
+			type = value[nsb_armor_variants]
+			type = value[bba_air_variants]
+			type = enum[md_unique_dupe_archetypes] 	# TODO: Remove this once we have  system for creating custom duplicate archetype things
+			type = enum[equipment_bonus_type]
+
+			### The matching requirements on individual module slots.
+			## cardinality = 0..1
+			modules = {
+				### A slot can be assigned a module category. Any other module category fails the match. When designing an equipment variant, the latest available will be favored.
+				## cardinality = 0..inf
+				enum[module_slots] = enum[module_categories]
+
+				### A slot can be assigned a specific module. Any other module fails the match. Less than and greater than comparisons can be used to force lesser or greater modules within a chain of module upgrades. When designing an equipment variant, the earliest module will be favored for the lesser restriction, and the latest will be favored for the greater restriction.
+				## cardinality = 0..inf
+				enum[module_slots] = <module>
+
+				### A slot can be assigned empty. Any module of any kind fails the match. A slot can be greater than empty. Only an empty slot fails the match.
+				## cardinality = 0..inf
+				enum[module_slots] = empty
+
+				### A slot can refer to a nested group of more detailed requirements. If you provide multiple instances of module attributes or any_of attributes, then only one must match for the match to succeed.
+				## cardinality = 0..inf
+				enum[module_slots] = {
+					### You can specify a module category, or an equal, lesser, or greater module, or empty/non-empty.
+					## cardinality = 0..inf
+					module = enum[module_categories]
+					## cardinality = 0..inf
+					module = <module>
+					## cardinality = 0..inf
+					module = empty
+
+					# List of modules or module categories, any of which are sufficient for a match.
+					## cardinality = 0..inf
+					any_of = {
+						## cardinality = 0..inf
+						<module>
+						## cardinality = 0..inf
+						enum[module_categories]
+					}
+
+					### Optionally, for upgrading existing equipment to a this design, you can require that this slot must have a better module in order to use this design. Example upgrade > current. Alternatively, you can require that it must use exactly the same module that is already on the existing equipment. Example upgrade = current.
+					## cardinality = 0..1
+					upgrade = current
+				}
+			}
+			###
+			## cardinality = 0..1
+			upgrades = {
+				## cardinality = 0..inf
+				<upgrade> = int
+				## cardinality = 0..inf
+				<upgrade> = {
+					enum[base_factor] = int
+					## cardinality = 0..inf
+					modifier = {
+						alias_name[trigger] = alias_match_left[trigger]
+						enum[add_factor] = int
+					}
+				}
+			}
+		}
+
+		### List of hard requirements that all must match for this design to be usable. These follow the same pattern as a slot entry above within target_variant = { modules = { ... } }, but without being tied to an individual slot.
+		## cardinality = 0..1
+		requirements = {
+			## cardinality = 0..inf
+			module = enum[module_categories]
+			## cardinality = 0..inf
+			module = <module>
+		}
+
+		## cardinality = 0..1
+		### Additional modules that are allowed in any available slots for any of the above designs, after all requirements are fulfilled. Modules at the top of this list are favored over those at the bottom. Modules not in this list will not be used in any remaining open slots.
+		allowed_modules = {
+			## cardinality = 0..inf
+			<module>
+			## cardinality = 0..inf
+			enum[module_categories]
+		}
+	}
+}
+
+values = {
+    value[ai_template_roles] = {
+		# infantry
+		infantry
+		anti_tank
+		artillery
+		bicycle_battalion
+		cavalry
+		garrison
+		marines
+		mechanized
+		militia
+		mobile
+		motorized
+		mountaineers
+		paratroopers
+		suppression
+		fake_intel_unit
+
+		# armor
+		armor
+		light_armor
+		medium_armor
+		heavy_armor
+		modern_armor
+	}
+	value[ai_equipment_roles] = {
+		# planes
+		fighter
+		cas
+		naval_bomber
+		tactical_bomber
+		heavy_fighter
+		interceptor
+		scout_plane
+		suicide
+		strategic_bomber
+		cv_fighter
+		cv_cas
+		cv_naval_bomber
+		cv_suicide
+		cv_interceptor
+
+		# ships
+		naval_capital
+        naval_carrier
+        naval_screen
+        naval_sub
+    }
+}
+
+enums = {
+	enum[ai_research_areas] = {
+		defensive
+		offensive
+		#unit types?
+		carrier
+		battleship
+		cruiser
+	}
+	complex_enum[ai_templates] = {
+		path = "game/common/ai_templates"
+		name = {
+			enum_name = {
+				target_template = {
+				}
+			}
+		}
+	}
+	complex_enum[ai_equipment_design] = {
+		path = "game/common/ai_equipment"
+		name = {
+			enum_name = {
+				target_variant = {
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,188 @@
+types = {
+	type[spriteType] = {
+		path = "interface"
+		path = "dlc/dlc001_german_historical_portraits/interface"
+		path = "dlc/dlc002_polish_content_pack/interface"
+		path = "dlc/dlc003_rocket_launcher_unit_pack/interface"
+		path = "dlc/dlc004_famous_battleships_unit_pack/interface"
+		path = "dlc/dlc005_heavy_cruisers_unit_pack/interface"
+		path = "dlc/dlc006_soviet_tanks_unit_pack/interface"
+		path = "dlc/dlc007_german_tanks_unit_pack/interface"
+		path = "dlc/dlc008_french_tanks_unit_pack/interface"
+		path = "dlc/dlc009_british_tanks_unit_pack/interface"
+		path = "dlc/dlc010_us_tanks_unit_pack/interface"
+		path = "dlc/dlc011_german_march_order_music_pack/interface"
+		path = "dlc/dlc012_allied_radio_music_pack/interface"
+		path = "dlc/dlc013_sabaton/interface"
+		path = "dlc/dlc014_wallpaper/interface"
+		path = "dlc/dlc016_artbook/interface"
+		path = "dlc/dlc017_original_soundtrack/interface"
+		path = "integrated_dlc/dlc018_together_for_victory/interface"
+		path = "dlc/dlc019_sabaton_vol2/interface"
+		path = "integrated_dlc/dlc020_death_or_dishonor/interface"
+		path = "dlc/dlc021_anniversary_pack/interface"
+		path = "integrated_dlc/dlc022_waking_the_tiger/interface"
+		path = "dlc/dlc023_man_the_guns/interface"
+		path = "dlc/dlc024_man_the_guns_wallpaper/interface"
+		path = "dlc/dlc025_axis_armor_pack/interface"
+		path = "dlc/dlc026_radio_pack/interface"
+		path = "dlc/dlc027_la_resistance_preorder_bonus/interface"
+		path = "dlc/dlc028_la_resistance/interface"
+		path = "dlc/dlc029_allied_armor_pack/interface"
+		path = "dlc/dlc030_allied_speeches_pack/interface"
+		path = "dlc/dlc031_battle_for_the_bosporus/interface"
+		path = "dlc/dlc032_eastern_front_planes_pack/interface"
+		path = "dlc/dlc033_songs_of_the_eastern_front/interface"
+		path = "dlc/dlc034_no_step_back/interface"
+		path = "dlc/dlc035_no_step_back_preorder_bonus/interface"
+		path = "dlc/dlc036_by_blood_alone/interface"
+		path = "dlc/dlc037_by_blood_alone_preorder_bonus/interface"
+		path = "dlc/dlc038_arms_against_tyranny/interface"
+		path = "dlc/dlc039_arms_against_tyranny_preorder_bonus/interface"
+		skip_root_key = spriteTypes
+		skip_root_key = bitmapfonts
+		path_extension = .gfx
+		name_field = "name"
+		## type_key_filter = spriteType
+		subtype[spriteType] = { }
+		## type_key_filter = SpriteType
+		subtype[spriteType] = { }
+		## type_key_filter = frameAnimatedSpriteType
+		subtype[frameAnimatedSpriteType] = { }
+		## type_key_filter = corneredTileSpriteType
+		subtype[corneredTileSpriteType] = { }
+		## type_key_filter = maskedShieldType
+		subtype[maskedShieldType] = { }
+		## type_key_filter = textSpriteType
+		subtype[textSpriteType] = { }
+		## type_key_filter = progressbartype
+		subtype[progressbartype] = { }
+		## type_key_filter = pieChartType
+		subtype[pieChartType] = { }
+		## type_key_filter = circularProgressBarType
+		subtype[circularProgressBarType] = { }
+		## type_key_filter = LineChartType
+		subtype[LineChartType] = { }
+		## type_key_filter = bitmapfont_override
+		subtype[bitmapfont_override] = { }
+	}
+}
+
+spriteType = {
+	name = scalar
+	## cardinality = 0..1
+	effectFile = filepath
+	## cardinality = 0..1
+	noOfFrames = int
+	## cardinality = 0..1
+	animation_rate_fps = float
+	## cardinality = 0..1
+	looping = bool
+	## cardinality = 0..1
+	play_on_show = bool
+	## cardinality = 0..inf
+	animation = {
+		## cardinality = 0..1
+		animationmaskfile = scalar
+		## cardinality = 0..1
+		animationtexturefile = scalar
+		## cardinality = 0..1
+		animationrotation = float
+		## cardinality = 0..1
+		animationlooping = bool
+		## cardinality = 0..1
+		animationtime = float
+		## cardinality = 0..1
+		animationdelay = float
+		## cardinality = 0..1
+		animationtype = scalar
+		## cardinality = 0..1
+		animationblendmode = scalar
+		## cardinality = 0..1
+		animationrotationoffset = { x = float y = float }
+		## cardinality = 0..1
+		animationtexturescale = { x = float y = float }
+		## cardinality = 0..1
+		animationframes = {
+			## cardinality = 1..inf
+			int
+		}
+	}
+	## cardinality = 0..1
+	loadType = scalar
+	## cardinality = 0..1
+	transparencecheck = bool
+	## cardinality = 0..1
+	legacy_lazy_load = bool
+	## cardinality = 0..1
+	pause_on_loop = float
+	## cardinality = 0..1
+	alwaystransparent = bool
+	## cardinality = 0..1
+	generate_mip_maps = bool
+	subtype[spriteType] = {
+		textureFile = filepath
+	}
+	subtype[SpriteType] = {
+		textureFile = filepath
+	}
+	subtype[frameAnimatedSpriteType] = {
+		textureFile = filepath
+	}
+	subtype[corneredTileSpriteType] = {
+		textureFile = filepath
+		borderSize = { x = int y = int }
+		## cardinality = 0..1
+		tilingCenter = bool
+		size = { x = scalar y = scalar }
+		## cardinality = 0..1
+		animation_rate_spf = int
+		## cardinality = 0..1
+		allwaystransparent = bool
+	}
+	subtype[maskedShieldType] = {
+		textureFile1 = filepath
+		textureFile2 = filepath
+	}
+	subtype[textSpriteType] = {
+		textureFile = filepath
+		## cardinality = 0..1
+		clicksound = click
+	}
+	subtype[progressbartype] = {
+		textureFile1 = filepath
+		textureFile2 = filepath
+		size = { x = int y = int }
+		horizontal = bool
+		color = {
+			## cardinality = 3..3
+			float
+		}
+		colortwo = {
+			## cardinality = 3..3
+			float
+		}
+		steps = int
+	}
+	subtype[pieChartType] = {
+		size = int
+	}
+	subtype[circularProgressBarType] = {
+		textureFile1 = filepath
+		textureFile2 = filepath
+		size = int
+		rotation = int
+		amount = int
+	}
+	subtype[LineChartType] = {
+		size = { x = int y = int }
+		linewidth = float
+	}
+	subtype[bitmapfont_override] = {
+		fontfiles = {
+			## cardinality = 1..inf
+			filepath[,.fnt]
+		}
+		languages = { enum[localisation_locales] }
+	}
+}

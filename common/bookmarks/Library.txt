@@ -1,0 +1,20 @@
+bookmarks = {
+	bookmark = {
+		name = "Library_name"
+		desc = "Library_desc"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = PRC
+		default = yes
+		effect = {
+			randomize_weather = 12345
+			randomize_weather = 22345
+		}
+		PRC = {
+			history = "PRC_Library_desc"
+			ideology = communism
+			ideas = {}
+			focuses = {}
+		}
+	}
+}

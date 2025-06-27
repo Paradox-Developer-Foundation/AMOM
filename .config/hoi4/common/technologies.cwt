@@ -1,0 +1,312 @@
+types = {
+	type[technology] = {
+		skip_root_key = technologies
+		path = "game/common/technologies"
+		subtype[doctrine] = {
+			doctrine = yes
+		}
+		subtype[nsb_armor_tech] = {
+			folder = {
+				name = nsb_armour_folder
+				position = { x = float y = float }
+			}
+		}
+		subtype[bba_air_tech] = {
+			folder = {
+				name = bba_air_techs_folder
+				position = { x = float y = float }
+			}
+		}	
+	}
+	type[tech_sharing_group] = {
+		path = "game/common/technology_sharing"
+		name_field = "id"
+	}
+}
+
+## replace_scope = { this = country root = country }
+technology = {
+	## cardinality = 0..1
+	doctrine_name = scalar
+
+	## cardinality = 0..1
+	show_equipment_icon = bool
+	## cardinality = 0..1
+	desc = localisation
+
+	## cardinality = 0..1
+	xp_research_type = enum[experience_types]
+	## cardinality = 0..1
+	xp_research_cost = int
+	## cardinality = 0..1
+	xp_boost_cost = int
+	## cardinality = 0..1
+	xp_research_bonus = float
+	subtype[doctrine] = {
+		xp_unlock_cost = int
+	}
+
+	## cardinality = 0..1
+	### Hides technology unless trigger is true.
+	allow = {
+		## cardinality = ~1..inf
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	### Hides technology and children unless trigger is true.
+	allow_branch = {
+		## cardinality = ~1..inf
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	is_special_project_tech = bool
+	## cardinality = 0..1
+	### Make technology exclusive with techs named.
+	xor = {
+		## cardinality = ~1..inf
+		<technology>
+	}
+	## cardinality = 0..inf
+	### Enables listed units.
+	enable_subunits = {
+		## cardinality = ~1..inf
+		<unit>
+	}
+	## cardinality = 0..inf
+	### Enables listed equipment.
+	enable_equipments = {
+		## cardinality = 0..1
+		limit = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		
+		## cardinality = 0..inf
+		<equipment>
+		## cardinality = 0..inf
+		<duplicate_archetypes>
+		## cardinality = 0..inf
+		subtype[nsb_armor_tech] = {
+			## cardinality = ~1..inf
+			value_set[nsb_armor_variants]
+		}
+		## cardinality = 0..inf
+		subtype[bba_air_tech] = {
+			## cardinality = ~1..inf
+			value_set[bba_air_variants]
+		}
+	}
+	## cardinality = 0..inf
+	### Enables listed equipment modules.
+	enable_equipment_modules = {
+		## cardinality = ~1..inf
+		<module>
+	}
+
+	## cardinality = 0..inf
+	### Sets max level of named building.
+	enable_building = {
+		building = <building>
+		level = int
+	}
+	## cardinality = 0..inf
+	enable_tactic = <combat_tactic>
+	## cardinality = 0..1
+	### Technologies directly dependent on this tech.
+	sub_technologies = {
+		# vanila defines limit sub techs to three
+		## cardinality = ~1..3
+		<technology>
+	}
+	## cardinality = 0..inf
+	### Techs following this.
+	path = {
+		## cardinality = 0..1
+		leads_to_tech = <technology>
+		## cardinality = 0..1
+		research_cost_coeff = float
+		### Ignores path for layout. Useful for techs with multiple parents belonging to different tech grids or folders.
+		## cardinality = 0..1
+		ignore_for_layout = bool
+	}
+	## cardinality = 0..1
+	dependencies = {
+		## cardinality = ~1..inf
+		<technology> = int
+	}
+	### Multiplier to base tech cost in defines.lua
+	## cardinality = 0..1
+	research_cost = float
+	## cardinality = 0..1
+	### When ahead of time penalty reaches 0.
+	start_year = int
+
+	## cardinality = 0..1
+	sub_tech_index = int
+
+	## cardinality = 0..inf
+	### Which folder(s) tech appears in.
+	folder = {
+		name = enum[tech_folder]
+		position = { x = float y = float }
+	}
+	## cardinality = 0..1
+	### Is a doctrine.
+	doctrine = bool
+	## cardinality = 0..1
+	### AI weights for research.
+	ai_will_do = {
+		## cardinality = 0..1
+		enum[base_factor] = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	### Modifies AI willingness for categories.
+	ai_research_weights = {
+		## cardinality = 0..inf
+		enum[ai_research_areas] = float
+		## cardinality = 0..inf
+		enum[tech_category] = float
+		## cardinality = 0..inf
+		enum[equipment_category] = float
+		## cardinality = 0..inf
+		<resource> = float
+	}
+	## cardinality = 0..1
+	### Categories for tech.
+	categories = {
+		## cardinality = ~1..inf
+		enum[tech_category]
+	}
+	## cardinality = 0..1
+	special_project_specialization = { 
+		## cardinality = 0..inf
+		<specialization> 
+	}
+	## cardinality = 0..inf
+	enum[unit_category] = {
+		## cardinality = 0..inf
+		alias_name[unit_stat] = alias_match_left[unit_stat]
+		alias_name[naval_stat] = alias_match_left[naval_stat]
+		alias_name[air_stat] = alias_match_left[air_stat]
+		## cardinality = 0..1
+		need = {
+			## cardinality = ~1..inf
+			<equipment> = int
+			## cardinality = 0..1
+			value[bba_air_variants] = int
+			## cardinality = 0..inf
+			value[nsb_armor_variants] = int
+		}
+	}
+	## cardinality = 0..inf
+	<unit> = {
+		## cardinality = 0..inf
+		need = {
+			## cardinality = 1..inf
+			<equipment> = int
+			## cardinality = 0..1
+			value[bba_air_variants] = int
+			## cardinality = 0..inf
+			value[nsb_armor_variants] = int
+		}
+		## cardinality = 0..inf
+		alias_name[unit_stat] = alias_match_left[unit_stat]
+		alias_name[naval_stat] = alias_match_left[naval_stat]
+		alias_name[air_stat] = alias_match_left[air_stat]
+		## cardinality = 0..inf
+		battalion_mult = {
+			## cardinality = 1..inf
+			category = enum[unit_category]
+			## cardinality = 1..inf
+			alias_name[unit_stat] = alias_match_left[unit_stat]
+			## cardinality = 0..1
+			add = bool
+			## cardinality = 0..1
+			display_as_percentage = bool
+		}
+		## cardinality = 0..inf
+		enum[region_weather] = {
+			## cardinality = 0..inf
+			alias_name[unit_stat] = alias_match_left[unit_stat]
+			alias_name[naval_stat] = alias_match_left[naval_stat]
+			alias_name[air_stat] = alias_match_left[air_stat]
+		}
+		
+		## cardinality = 0..1
+		### use this equipment for speed
+		transport = <equipment>
+	}
+	## cardinality = 0..1
+	modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+
+	## cardinality = 0..1
+	on_research_complete_limit = {
+		## cardinality = 0..1
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## cardinality = 0..1
+	on_research_complete = {
+		## cardinality = 0..1
+		alias_name[effect] = alias_match_left[effect]
+	}
+
+	## cardinality = 0..1
+	force_use_small_tech_layout = yes
+	## cardinality = 0..1
+	show_effect_as_desc = bool
+	## cardinality = 0..1
+	nuclear_production = float
+
+	alias_name[modifier] = alias_match_left[modifier]
+	alias_name[unit_stat] = alias_match_left[unit_stat]
+	alias_name[naval_stat] = alias_match_left[naval_stat]
+	alias_name[air_stat] = alias_match_left[air_stat]
+}
+
+tech_sharing_group = {
+	id = scalar
+	name = localisation
+	desc = localisation
+	## severity = warning
+	picture = <spriteType>
+
+	research_sharing_per_country_bonus = float
+	## cardinality = 0..1
+	is_faction_sharing = yes
+	## cardinality = 0..1
+	### Categories for tech.
+	categories = {
+		## cardinality = ~1..inf
+		enum[tech_category]
+	}
+	## cardinality = 0..1
+	available = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+enums = {
+	complex_enum[tech_category] = {
+		path = "game/common/technology_tags"
+		start_from_root = yes
+		name = {
+			technology_categories = {
+				enum_name
+			}
+		}
+	}
+	complex_enum[tech_folder] = {
+		path = "game/common/technology_tags"
+		start_from_root = yes
+		name = {
+			technology_folders = {
+				enum_name
+				enum_name = {
+				}
+			}
+		}
+	}
+}

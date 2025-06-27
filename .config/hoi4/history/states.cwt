@@ -1,0 +1,102 @@
+types = {
+	type[state] = {
+		path = "game/history/states"
+		name_field = id
+	}
+	type[state_category] = {
+		path = "game/common/state_category"
+		skip_root_key = state_categories
+	}
+}
+
+## replace_scope = { this = state root = state }
+state = {
+	id = int
+	name = localisation
+	## cardinality = 0..1
+	resources = {
+		## cardinality = ~1..inf
+		<resource> = float
+	}
+	history = {
+		owner = enum[explicit_country_tags]
+		## cardinality = 0..1
+		controller = enum[explicit_country_tags]
+		## cardinality = 0..inf
+		victory_points = {
+			# provinces overlap the ints, have to use 2 provinces here, floats will return error
+			## cardinality = 2..2
+		}
+		## cardinality = 0..1
+		buildings = {
+			## cardinality = 0..inf
+			<building> = int[0..20]
+			## cardinality = 0..inf
+			int = {
+				## cardinality = 0..inf
+				<building> = int[0..20]
+				## cardinality = 0..1
+				<building.landmark> = {
+					## cardinality = 0..1
+					allowed = {
+						alias_name[trigger] = alias_match_left[trigger]
+					}
+					level = int
+				}
+				## cardinality = 0..1
+				<building.canal> = {
+					## cardinality = 0..1
+					allowed = {
+						alias_name[trigger] = alias_match_left[trigger]
+					}
+					level = int
+				}
+			}
+		}
+		alias_name[effect] = alias_match_left[effect]
+		## cardinality = 0..inf
+		date_field = {
+			## cardinality = 0..1
+			owner = enum[explicit_country_tags]
+			## cardinality = 0..1
+			controller = enum[explicit_country_tags]
+			## cardinality = 0..inf
+			victory_points = {
+				# provinces overlap the ints, have to use 2 provinces here, floats will return error
+				## cardinality = 2..2
+				enum[provinces]
+			}
+			## cardinality = 0..1
+			buildings = {
+				## cardinality = 0..inf
+				<building.state> = int[0..20]
+				## cardinality = 0..inf
+				enum[provinces] = {
+					## cardinality = 0..inf
+					<building.provincial> = int[0..20]
+				}
+			}
+			alias_name[effect] = alias_match_left[effect]
+		}
+	}
+	## cardinality = 0..1
+	local_supplies = float[0..20]
+	provinces = {
+		## cardinality = ~1..inf
+		int
+	}
+	manpower = int[0..inf]
+	## cardinality = 0..1
+	buildings_max_level_factor = float
+	state_category = <state_category>
+	## cardinality = 0..1
+	impassable = yes
+}
+
+state_category = {
+	local_building_slots = int
+	color = {
+		## cardinality = 3..3
+		int
+	}
+}

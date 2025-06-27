@@ -1,0 +1,488 @@
+types = {
+	## type_key_filter = pdxmesh
+	type[pdxmesh] = {
+		skip_root_key = objectTypes
+		path = "gfx"
+		path = "dlc/dlc001_german_historical_portraits/gfx"
+		path = "dlc/dlc002_polish_content_pack/gfx"
+		path = "dlc/dlc003_rocket_launcher_unit_pack/gfx"
+		path = "dlc/dlc004_famous_battleships_unit_pack/gfx"
+		path = "dlc/dlc005_heavy_cruisers_unit_pack/gfx"
+		path = "dlc/dlc006_soviet_tanks_unit_pack/gfx"
+		path = "dlc/dlc007_german_tanks_unit_pack/gfx"
+		path = "dlc/dlc008_french_tanks_unit_pack/gfx"
+		path = "dlc/dlc009_british_tanks_unit_pack/gfx"
+		path = "dlc/dlc010_us_tanks_unit_pack/gfx"
+		path = "dlc/dlc011_german_march_order_music_pack/gfx"
+		path = "dlc/dlc012_allied_radio_music_pack/gfx"
+		path = "dlc/dlc013_sabaton/gfx"
+		path = "dlc/dlc014_wallpaper/gfx"
+		path = "dlc/dlc016_artbook/gfx"
+		path = "dlc/dlc017_original_soundtrack/gfx"
+		path = "integrated_dlc/dlc018_together_for_victory/gfx"
+		path = "dlc/dlc019_sabaton_vol2/gfx"
+		path = "integrated_dlc/dlc020_death_or_dishonor/gfx"
+		path = "dlc/dlc021_anniversary_pack/gfx"
+		path = "integrated_dlc/dlc022_waking_the_tiger/gfx"
+		path = "dlc/dlc023_man_the_guns/gfx"
+		path = "dlc/dlc024_man_the_guns_wallpaper/gfx"
+		path = "dlc/dlc025_axis_armor_pack/gfx"
+		path = "dlc/dlc026_radio_pack/gfx"
+		path = "dlc/dlc027_la_resistance_preorder_bonus/gfx"
+		path = "dlc/dlc028_la_resistance/gfx"
+		path = "dlc/dlc029_allied_armor_pack/gfx"
+		path = "dlc/dlc030_allied_speeches_pack/gfx"
+		path = "dlc/dlc031_battle_for_the_bosporus/gfx"
+		path = "dlc/dlc032_eastern_front_planes_pack/gfx"
+		path = "dlc/dlc033_songs_of_the_eastern_front/gfx"
+		path = "dlc/dlc034_no_step_back/gfx"
+		path = "dlc/dlc035_no_step_back_preorder_bonus/gfx"
+		path = "dlc/dlc036_by_blood_alone/gfx"
+		path = "dlc/dlc037_by_blood_alone_preorder_bonus/gfx"
+		path = "dlc/dlc038_arms_against_tyranny/gfx"
+		path = "dlc/dlc039_arms_against_tyranny_preorder_bonus/gfx"
+		path = "dlc/dlc040_trial_of_allegiance/gfx"
+		path = "dlc/dlc041_trial_of_allegiance_preorder_bonus/gfx"
+		path = "dlc/dlc042_content_creator_pack_soviet_union_2d_art/gfx"
+		path = "dlc/dlc043_gotterdammerung/gfx"
+		path_extension = .gfx
+		name_field = "name"
+	}
+	## type_key_filter = animation
+	type[animation_id] = {
+		skip_root_key = { objectTypes any }
+		path = "gfx"
+		path = "dlc/dlc001_german_historical_portraits/gfx"
+		path = "dlc/dlc002_polish_content_pack/gfx"
+		path = "dlc/dlc003_rocket_launcher_unit_pack/gfx"
+		path = "dlc/dlc004_famous_battleships_unit_pack/gfx"
+		path = "dlc/dlc005_heavy_cruisers_unit_pack/gfx"
+		path = "dlc/dlc006_soviet_tanks_unit_pack/gfx"
+		path = "dlc/dlc007_german_tanks_unit_pack/gfx"
+		path = "dlc/dlc008_french_tanks_unit_pack/gfx"
+		path = "dlc/dlc009_british_tanks_unit_pack/gfx"
+		path = "dlc/dlc010_us_tanks_unit_pack/gfx"
+		path = "dlc/dlc011_german_march_order_music_pack/gfx"
+		path = "dlc/dlc012_allied_radio_music_pack/gfx"
+		path = "dlc/dlc013_sabaton/gfx"
+		path = "dlc/dlc014_wallpaper/gfx"
+		path = "dlc/dlc016_artbook/gfx"
+		path = "dlc/dlc017_original_soundtrack/gfx"
+		path = "integrated_dlc/dlc018_together_for_victory/gfx"
+		path = "dlc/dlc019_sabaton_vol2/gfx"
+		path = "integrated_dlc/dlc020_death_or_dishonor/gfx"
+		path = "dlc/dlc021_anniversary_pack/gfx"
+		path = "integrated_dlc/dlc022_waking_the_tiger/gfx"
+		path = "dlc/dlc023_man_the_guns/gfx"
+		path = "dlc/dlc024_man_the_guns_wallpaper/gfx"
+		path = "dlc/dlc025_axis_armor_pack/gfx"
+		path = "dlc/dlc026_radio_pack/gfx"
+		path = "dlc/dlc027_la_resistance_preorder_bonus/gfx"
+		path = "dlc/dlc028_la_resistance/gfx"
+		path = "dlc/dlc029_allied_armor_pack/gfx"
+		path = "dlc/dlc030_allied_speeches_pack/gfx"
+		path = "dlc/dlc031_battle_for_the_bosporus/gfx"
+		path = "dlc/dlc032_eastern_front_planes_pack/gfx"
+		path = "dlc/dlc033_songs_of_the_eastern_front/gfx"
+		path = "dlc/dlc034_no_step_back/gfx"
+		path = "dlc/dlc035_no_step_back_preorder_bonus/gfx"
+		path = "dlc/dlc036_by_blood_alone/gfx"
+		path = "dlc/dlc037_by_blood_alone_preorder_bonus/gfx"
+		path = "dlc/dlc038_arms_against_tyranny/gfx"
+		path = "dlc/dlc039_arms_against_tyranny_preorder_bonus/gfx"
+		path = "dlc/dlc040_trial_of_allegiance/gfx"
+		path = "dlc/dlc041_trial_of_allegiance_preorder_bonus/gfx"
+		path = "dlc/dlc042_content_creator_pack_soviet_union_2d_art/gfx"
+		path = "dlc/dlc043_gotterdammerung/gfx"
+		path_extension = .gfx
+		name_field = "id"
+	}
+
+	## type_key_filter = entity
+	type[entity] = {
+		path = "gfx"
+		path = "dlc/dlc001_german_historical_portraits/gfx"
+		path = "dlc/dlc002_polish_content_pack/gfx"
+		path = "dlc/dlc003_rocket_launcher_unit_pack/gfx"
+		path = "dlc/dlc004_famous_battleships_unit_pack/gfx"
+		path = "dlc/dlc005_heavy_cruisers_unit_pack/gfx"
+		path = "dlc/dlc006_soviet_tanks_unit_pack/gfx"
+		path = "dlc/dlc007_german_tanks_unit_pack/gfx"
+		path = "dlc/dlc008_french_tanks_unit_pack/gfx"
+		path = "dlc/dlc009_british_tanks_unit_pack/gfx"
+		path = "dlc/dlc010_us_tanks_unit_pack/gfx"
+		path = "dlc/dlc011_german_march_order_music_pack/gfx"
+		path = "dlc/dlc012_allied_radio_music_pack/gfx"
+		path = "dlc/dlc013_sabaton/gfx"
+		path = "dlc/dlc014_wallpaper/gfx"
+		path = "dlc/dlc016_artbook/gfx"
+		path = "dlc/dlc017_original_soundtrack/gfx"
+		path = "integrated_dlc/dlc018_together_for_victory/gfx"
+		path = "dlc/dlc019_sabaton_vol2/gfx"
+		path = "integrated_dlc/dlc020_death_or_dishonor/gfx"
+		path = "dlc/dlc021_anniversary_pack/gfx"
+		path = "integrated_dlc/dlc022_waking_the_tiger/gfx"
+		path = "dlc/dlc023_man_the_guns/gfx"
+		path = "dlc/dlc024_man_the_guns_wallpaper/gfx"
+		path = "dlc/dlc025_axis_armor_pack/gfx"
+		path = "dlc/dlc026_radio_pack/gfx"
+		path = "dlc/dlc027_la_resistance_preorder_bonus/gfx"
+		path = "dlc/dlc028_la_resistance/gfx"
+		path = "dlc/dlc029_allied_armor_pack/gfx"
+		path = "dlc/dlc030_allied_speeches_pack/gfx"
+		path = "dlc/dlc031_battle_for_the_bosporus/gfx"
+		path = "dlc/dlc032_eastern_front_planes_pack/gfx"
+		path = "dlc/dlc033_songs_of_the_eastern_front/gfx"
+		path = "dlc/dlc034_no_step_back/gfx"
+		path = "dlc/dlc035_no_step_back_preorder_bonus/gfx"
+		path = "dlc/dlc036_by_blood_alone/gfx"
+		path = "dlc/dlc037_by_blood_alone_preorder_bonus/gfx"
+		path = "dlc/dlc038_arms_against_tyranny/gfx"
+		path = "dlc/dlc039_arms_against_tyranny_preorder_bonus/gfx"
+		path = "dlc/dlc040_trial_of_allegiance/gfx"
+		path = "dlc/dlc041_trial_of_allegiance_preorder_bonus/gfx"
+		path = "dlc/dlc042_content_creator_pack_soviet_union_2d_art/gfx"
+		path = "dlc/dlc043_gotterdammerung/gfx"
+		path_extension = .asset
+		name_field = "name"
+	}
+
+	## type_key_filter = animation
+	type[model_animation] = {
+		path = "gfx"
+		path = "dlc/dlc001_german_historical_portraits/gfx"
+		path = "dlc/dlc002_polish_content_pack/gfx"
+		path = "dlc/dlc003_rocket_launcher_unit_pack/gfx"
+		path = "dlc/dlc004_famous_battleships_unit_pack/gfx"
+		path = "dlc/dlc005_heavy_cruisers_unit_pack/gfx"
+		path = "dlc/dlc006_soviet_tanks_unit_pack/gfx"
+		path = "dlc/dlc007_german_tanks_unit_pack/gfx"
+		path = "dlc/dlc008_french_tanks_unit_pack/gfx"
+		path = "dlc/dlc009_british_tanks_unit_pack/gfx"
+		path = "dlc/dlc010_us_tanks_unit_pack/gfx"
+		path = "dlc/dlc011_german_march_order_music_pack/gfx"
+		path = "dlc/dlc012_allied_radio_music_pack/gfx"
+		path = "dlc/dlc013_sabaton/gfx"
+		path = "dlc/dlc014_wallpaper/gfx"
+		path = "dlc/dlc016_artbook/gfx"
+		path = "dlc/dlc017_original_soundtrack/gfx"
+		path = "integrated_dlc/dlc018_together_for_victory/gfx"
+		path = "dlc/dlc019_sabaton_vol2/gfx"
+		path = "integrated_dlc/dlc020_death_or_dishonor/gfx"
+		path = "dlc/dlc021_anniversary_pack/gfx"
+		path = "integrated_dlc/dlc022_waking_the_tiger/gfx"
+		path = "dlc/dlc023_man_the_guns/gfx"
+		path = "dlc/dlc024_man_the_guns_wallpaper/gfx"
+		path = "dlc/dlc025_axis_armor_pack/gfx"
+		path = "dlc/dlc026_radio_pack/gfx"
+		path = "dlc/dlc027_la_resistance_preorder_bonus/gfx"
+		path = "dlc/dlc028_la_resistance/gfx"
+		path = "dlc/dlc029_allied_armor_pack/gfx"
+		path = "dlc/dlc030_allied_speeches_pack/gfx"
+		path = "dlc/dlc031_battle_for_the_bosporus/gfx"
+		path = "dlc/dlc032_eastern_front_planes_pack/gfx"
+		path = "dlc/dlc033_songs_of_the_eastern_front/gfx"
+		path = "dlc/dlc034_no_step_back/gfx"
+		path = "dlc/dlc035_no_step_back_preorder_bonus/gfx"
+		path = "dlc/dlc036_by_blood_alone/gfx"
+		path = "dlc/dlc037_by_blood_alone_preorder_bonus/gfx"
+		path = "dlc/dlc038_arms_against_tyranny/gfx"
+		path = "dlc/dlc039_arms_against_tyranny_preorder_bonus/gfx"
+		path = "dlc/dlc040_trial_of_allegiance/gfx"
+		path = "dlc/dlc041_trial_of_allegiance_preorder_bonus/gfx"
+		path = "dlc/dlc042_content_creator_pack_soviet_union_2d_art/gfx"
+		path = "dlc/dlc043_gotterdammerung/gfx"
+		path_extension = .asset
+		name_field = "name"
+	}
+}
+
+pdxmesh = {
+	name = scalar
+	file = filepath
+
+	## cardinality = 0..1
+	scale = float
+
+	## cardinality = 0..inf
+	## severity = warning
+	animation = {
+		id = scalar
+		type = <model_animation>
+	}
+
+	## cardinality = 0..inf
+	meshsettings = {
+		## cardinality = 0..1
+		name = scalar
+
+		## cardinality = 0..1
+		index = int
+
+		## cardinality = 0..1
+		texture_diffuse = scalar
+
+		## cardinality = 0..1
+		texture_normal = scalar
+
+		## cardinality = 0..1
+		texture_specular = scalar
+
+		## cardinality = 0..1
+		shader = scalar
+	}
+	
+	## cardinality = 0..inf
+	variant = {
+		weight = float
+		pdxmesh = <pdxmesh>
+	}
+
+	## cardinality = 0..1
+	cull_distance = float
+}
+
+
+entity = {
+	## cardinality = 0..1
+	clone = <entity>
+	name = scalar
+
+	## cardinality = 0..1
+	## severity = warning
+	pdxmesh = <pdxmesh>
+	## cardinality = 0..1
+	pdxmesh = "empty_mesh"
+
+	## cardinality = 0..1
+	version = int
+
+	## cardinality = 0..1
+	cull_radius = float
+
+	## cardinality = 0..1
+	scale = float
+
+	## cardinality = 0..inf
+	locator = {
+		name = scalar
+		position = {
+			## cardinality = 3..3
+			float
+		}
+
+		## cardinality = 0..1
+		rotation = {
+			## cardinality = 3..3
+			float
+		}
+	}
+
+	## cardinality = 0..1
+	default_state = enum[model_states]
+	## cardinality = 0..1
+	default_state = no_state
+
+	## cardinality = 0..1
+	get_state_from_parent = bool
+
+	## cardinality = 0..1
+	clone = <entity>
+
+	## cardinality = 0..inf
+	state = {
+		name = scalar
+
+		## cardinality = 0..1
+		state_time = float
+
+		## cardinality = 0..1
+		next_state = enum[model_states]
+
+		## cardinality = 0..1
+		animation = enum[model_animations]
+
+		## cardinality = 0..1
+		animation_speed = float
+
+		## cardinality = 0..1
+		animation_blend_time = float
+
+		## cardinality = 0..1
+		looping = bool
+
+		## cardinality = 0..1
+		chance = float
+
+		## cardinality = 0..1
+		time_offset = {
+			## cardinality = 2..2
+			float
+		}
+
+		## cardinality = 0..inf
+		propagate_state = {
+			enum[model_attachments] = enum[model_states]
+		}
+
+		## cardinality = 0..1
+		game_data = {
+			## cardinality = 0..inf
+			hitmiss_effect = {
+				time = float
+				type = enum[hitmiss_effect_types]
+			}
+		}
+
+		## cardinality = 0..inf
+		event = {
+			## cardinality = 0..1
+			id = enum[entity_state_event_ids]
+
+			## cardinality = 0..1
+			trigger_once = bool
+
+			## cardinality = 0..1
+			node = scalar
+
+			## cardinality = 0..1
+			entity = <entity>
+
+			## cardinality = 0..1
+			life = float
+
+			## cardinality = 0..1
+			time = float
+
+			## cardinality = 0..1
+			particle = <pdxparticle>
+
+			## cardinality = 0..1
+			keep_particle = bool
+
+			## cardinality = 0..1
+			sound = {
+				soundeffect = scalar #<soundeffect> does not properly check for voices and other misc sounds and soundefects in mods since those are dlc files
+			}
+
+			## cardinality = 0..1
+			light = <light>
+		}
+	}
+
+    ## cardinality = 0..inf
+    attach = {
+        name = scalar
+        ## cardinality = 2..2
+        scalar = <entity>
+    }
+
+	## cardinality = 0..1
+	game_data = {
+		## cardinality = 0..1
+		texture_anim_speed = float
+	}
+}
+
+model_animation = {
+	name = scalar
+	file = scalar
+}
+
+enums = {
+	enum[hitmiss_effect_types] = {
+		big
+		small
+	}
+
+	enum[entity_state_event_ids] = {
+		a_1_bomb
+		a_1_crash
+		a_1_fire
+		a_1_firebomb
+		a_1_idle
+		a_1_supply
+		a_2_bomb
+		a_2_crash
+		a_2_fire
+		a_2_firebomb
+		a_2_idle
+		a_2_supply
+		a_3_bomb
+		a_3_crash
+		a_3_fire
+		a_3_firebomb
+		a_3_idle
+		a_3_supply
+		a_bomb
+		a_crash
+		a_explode
+		a_fire
+		a_firebomb
+		a_idle
+		a_supply
+		d_1_crash
+		d_1_fire
+		d_1_idle
+		d_2_crash
+		d_2_fire
+		d_2_idle
+		d_3_crash
+		d_3_fire
+		d_3_idle
+		d_bomb
+		d_crash
+		d_fire
+		d_idle
+	}
+
+	complex_enum[model_animations] = {
+		path = "gfx"
+		start_from_root = yes
+		name = {
+			objectTypes = {
+				pdxmesh = {
+					animation= {
+						id = enum_name
+					}
+				}
+			}
+		}
+	}
+
+	complex_enum[model_states] = {
+		path = "gfx"
+		start_from_root = yes
+		name = {
+			entity = {
+				state = {
+					name = enum_name
+				}
+			}
+		}
+	}
+
+	complex_enum[model_locators] = {
+		path = "gfx"
+		start_from_root = yes
+		name = {
+			entity = {
+				locator = {
+					name = enum_name
+				}
+			}
+		}
+	}
+
+	complex_enum[model_attachments] = {
+		path = "gfx"
+		start_from_root = yes
+		name = {
+			entity = {
+				attach = {
+					name = enum_name
+				}
+			}
+		}
+	}
+}
