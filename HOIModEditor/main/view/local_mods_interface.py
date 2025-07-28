@@ -66,7 +66,7 @@ class ModLoader(QObject):
 
         match_path = re.search(r'(?<!replace_)path\s*=\s*"\s*([^"]+?)\s*"', content)
         if not match_path:
-            logging.warning("文件 %s 中未找到模组路径", mod_file.name)
+            logging.warning('''文件 "%s" 中未找到模组路径''', mod_file.name)
             return None
         folder_path = match_path.group(1).strip()
         if folder_path.startswith("mod/"):
