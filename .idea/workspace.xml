@@ -5,17 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35c82314-0e14-4908-b2e9-fb9666c250db" name="更改" comment="test">
-      <change afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HOIModEditor/.idea/.idea.HOIModEditor/.idea/icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/descriptor.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/霜泽图书馆.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/霜泽图书馆.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/view/local_mods_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/HOIModEditor/main/view/local_mods_interface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/descriptor.mod" beforeDir="false" afterPath="$PROJECT_DIR$/descriptor.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/Styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/folders of HOI4/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/folder.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/folders of HOI4/folder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/common/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/common/resource.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/common/signal_bus.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/common/style_sheet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/components/link_card.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/components/sample_card.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/config/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/images/header.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/images/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/images/icons/modlist/local.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/images/icons/modlist/steam.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/images/noneimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/dark/gallery_interface.qss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/dark/home_interface.qss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/dark/icon_interface.qss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/dark/link_card.qss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/dark/navigation_view_interface.qss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/dark/sample_card.qss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/dark/setting_interface.qss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/dark/view_interface.qss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/light/gallery_interface.qss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/light/home_interface.qss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/light/icon_interface.qss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/light/link_card.qss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/light/navigation_view_interface.qss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/light/sample_card.qss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/light/setting_interface.qss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/light/view_interface.qss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/view/create_mod_interface.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/view/gallery_interface.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/view/home_interface.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/view/local_mods_interface.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/view/main_window.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/view/setting_interface.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/run.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/localisation/localisation.md" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/localisation.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/Library/l_events_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/Library/l_events_l_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/Library/l_bookmarks_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/library/l_bookmarks_l_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/Library/l_events_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/library/l_events_l_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/Library/l_tips_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/library/l_tips_l_simp_chinese.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/view.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,65 +84,47 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.HOIModEditor.executor&quot;: &quot;Run&quot;,
-    &quot;Python.view.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.HOIModEditor.executor": "Run",
+    "Python.main_window.executor": "Run",
+    "Python.run.executor": "Run",
+    "Python.view.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ns992/Documents/Paradox Interactive/Hearts of Iron IV/mod/Library of Shuangze/HOIModEditor/.idea/.idea.HOIModEditor/.idea",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ns992\Documents\Paradox Interactive\Hearts of Iron IV\mod\Library of Shuangze\HOIModEditor\.idea\.idea.HOIModEditor\.idea" />
+      <recent name="C:\Users\ns992\Documents\Paradox Interactive\Hearts of Iron IV\mod\szl" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ns992\Documents\Paradox Interactive\Hearts of Iron IV\mod\szl\documentation\folders of HOI4" />
       <recent name="C:\Users\ns992\Documents\Paradox Interactive\Hearts of Iron IV\mod\szl\HOIModEditor\main\config" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="HOIModEditor" type="PythonConfigurationType" factoryName="Python">
-      <module name="霜泽图书馆" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.13 (szl)" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HOIModEditor/run.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-PY-252.23892.194" />
-        <option value="bundled-python-sdk-1d02c8f8a5de-29f63f91a358-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.23892.194" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.248" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.248" />
       </set>
     </attachedChunks>
   </component>
@@ -139,7 +157,29 @@
       <workItem from="1752913752244" duration="2334000" />
       <workItem from="1753643386328" duration="7000" />
       <workItem from="1753644213129" duration="937000" />
-      <workItem from="1753717395779" duration="4080000" />
+      <workItem from="1753717395779" duration="5356000" />
+      <workItem from="1753769969918" duration="171000" />
+      <workItem from="1753770155938" duration="762000" />
+      <workItem from="1753883207799" duration="3885000" />
+      <workItem from="1754052499026" duration="253000" />
+      <workItem from="1754122826576" duration="4827000" />
+      <workItem from="1754156011945" duration="1722000" />
+      <workItem from="1754240816149" duration="5720000" />
+      <workItem from="1754293844536" duration="14740000" />
+      <workItem from="1754325177841" duration="25000" />
+      <workItem from="1754325210762" duration="1106000" />
+      <workItem from="1754376907806" duration="2393000" />
+      <workItem from="1754492379551" duration="1561000" />
+      <workItem from="1755071215928" duration="40000" />
+      <workItem from="1755341771982" duration="305000" />
+      <workItem from="1755342143347" duration="84000" />
+      <workItem from="1755343661579" duration="644000" />
+      <workItem from="1755344318473" duration="314000" />
+      <workItem from="1755349168040" duration="102000" />
+      <workItem from="1755349301367" duration="515000" />
+      <workItem from="1755349890098" duration="175000" />
+      <workItem from="1755350084377" duration="231000" />
+      <workItem from="1755350383026" duration="56000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -173,18 +213,33 @@
       <option name="project" value="LOCAL" />
       <updated>1750991521991</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="test">
+      <option name="closed" value="true" />
+      <created>1753728940683</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1753728940683</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.py" />
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="test" />
     <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/$HOIModEditor.coverage" NAME="HOIModEditor 覆盖结果" MODIFIED="1752913800291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/$main_window.coverage" NAME="main_window 覆盖结果" MODIFIED="1755344175965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HOIModEditor/main/view" />
+    <SUITE FILE_PATH="coverage/$HOIModEditor.coverage" NAME="HOIModEditor 覆盖结果" MODIFIED="1755343899601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/$view.coverage" NAME="view 覆盖结果" MODIFIED="1752910500112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/$run.coverage" NAME="run 覆盖结果" MODIFIED="1755344596925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HOIModEditor" />
   </component>
 </project>

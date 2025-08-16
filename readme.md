@@ -46,17 +46,9 @@
 等待索引完成，即可开始制作Mod。
 ## Mod结构
 ### descriptor.mod文件
-descriptor.mod文件即模组定义文件，其中包含有Mod的各种信息。
-- `version = xxx` Mod版本。
-- `name = xxx` Mod名称。
-- `tags = { xxx }` 包含创建Mod时勾选的标签。
-- `picture = "thumbnail.png"` Mod封面。
-- `replace_path = xxx` 包含Mod将要替换的文件夹。
-- `supported_version = *.*.*` Mod所支持的游戏版本
-- `remote_file_id = *` Mod在Steam创意工坊上的id，**上传之后自动生成，无需手动添加分配**。
-### thumbnail.png文件
+descriptor.mod文件即模组定义文件，其中包含有Mod的各种信息。详细内容参考 `descriptor.md` 文件。
+### thumbnail.png/thumbnail.gif文件
 Mod封面文件，同时也是上传至Steam创意工坊的封面文件。
-> *tips：封面文件可使用.gif文件以上传动态封面。*
 ### 文件夹
 Mod文件夹结构与原版游戏基本相同，关于原版文件夹内容可参考本Mod中`documentation\folder.html`文件或[此页面](https://docs.szlib.eu/zh/%E4%BB%A3%E7%A0%81/%E6%B8%B8%E6%88%8F%E6%96%87%E4%BB%B6%E6%9E%B6%E6%9E%84 "点击前往页面")。
 ## Mod读取

@@ -20,7 +20,7 @@
 ## 内容格式
 ### 基础本地化内容格式
 以下为一个基础本地化文件示例：
-```
+```paradox_localisation
 l_simp_chinese:  
  library:0 "图书馆"
 ```
@@ -28,7 +28,7 @@ l_simp_chinese:
 ### 本地化内容着色
 着色内容以符号`§`开头，后面跟字母或数字；`§!`标记着色内容结束。  
 以下为一个本地化示例：
-```
+```paradox_localisation
 l_simp_chinese:
  angry: "§R红温§!"
 ```
@@ -39,7 +39,7 @@ l_simp_chinese:
 ### 本地化内容嵌入图片
 图片嵌入内容以符号`£`进行插入。  
 以下为一个本地化示例：
-```
+```paradox_localisation
 l_simp_chinese:
  happy: "高兴£GFX_happy_face£"
 ```
