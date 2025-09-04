@@ -1,0 +1,35 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "productName": "HOI Mod Editor",
+  "version": "0.1.0",
+  "identifier": "com.ns9927.hoi_mod_editor",
+  "build": {
+    "beforeDevCommand": "",
+    "beforeBuildCommand": "",
+    "frontendDist": "../src"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "HOI Mod Editor",
+        "width": 1280,
+        "height": 960,
+        "resizable": true,
+        "fullscreen": false,
+        "transparent": true,
+        "decorations": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/icon.ico"
+    ]
+  },
+  "plugins": { }
+}

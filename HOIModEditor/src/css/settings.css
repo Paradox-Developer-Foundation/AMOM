@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f5f5f5;
+    color: #000;
+}
+
+.settings-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.settings-section {
+    margin-bottom: 2rem;
+}
+
+.settings-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.settings-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #0078d4;
+}

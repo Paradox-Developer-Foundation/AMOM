@@ -4,54 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35c82314-0e14-4908-b2e9-fb9666c250db" name="更改" comment="test">
-      <change afterPath="$PROJECT_DIR$/HOIModEditor/.idea/.idea.HOIModEditor/.idea/icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/descriptor.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="35c82314-0e14-4908-b2e9-fb9666c250db" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/HOIModEditor/.idea/.idea.HOIModEditor/.idea/avalonia.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/霜泽图书馆.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/霜泽图书馆.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/common/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/common/resource.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/common/signal_bus.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/common/style_sheet.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/components/link_card.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/components/sample_card.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/config/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/images/header.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/images/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/images/icons/modlist/local.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/images/icons/modlist/steam.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/images/noneimage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/dark/gallery_interface.qss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/dark/home_interface.qss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/dark/icon_interface.qss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/dark/link_card.qss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/dark/navigation_view_interface.qss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/dark/sample_card.qss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/dark/setting_interface.qss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/dark/view_interface.qss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/light/gallery_interface.qss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/light/home_interface.qss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/light/icon_interface.qss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/light/link_card.qss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/light/navigation_view_interface.qss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/light/sample_card.qss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/light/setting_interface.qss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/resource/qss/light/view_interface.qss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/view/create_mod_interface.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/view/gallery_interface.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/view/home_interface.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/view/local_mods_interface.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/view/main_window.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/main/view/setting_interface.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOIModEditor/run.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/localisation.md" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/localisation.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/Library/l_bookmarks_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/library/l_bookmarks_l_simp_chinese.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/Library/l_events_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/library/l_events_l_simp_chinese.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/Library/l_tips_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/library/l_tips_l_simp_chinese.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/.idea/.idea.HOIModEditor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HOIModEditor/.idea/.idea.HOIModEditor/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/HOIModEditor.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/obj/HOIModEditor.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/obj/HOIModEditor.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/obj/HOIModEditor.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/obj/project.packagespec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/obj/rider.project.model.nuget.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOIModEditor/obj/rider.project.restore.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/bookmarks/Library.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/bookmarks/bookmarks.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/on_actions/on_actions.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/on_actions/ql_on_actions.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/descriptor.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/descriptor.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/folders of HOI4/folder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/folders of HOI4/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/events.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/ql_events.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/localisation.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/library/l_bookmarks_l_simp_chinese.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/library/l_events_l_simp_chinese.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/library/l_tips_l_simp_chinese.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/loading_tips_l_simp_chinese.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thumbnail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/tools.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,32 +66,34 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.HOIModEditor.executor": "Run",
-    "Python.main_window.executor": "Run",
-    "Python.run.executor": "Run",
-    "Python.view.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ns992/Documents/Paradox Interactive/Hearts of Iron IV/mod/Library of Shuangze/HOIModEditor/.idea/.idea.HOIModEditor/.idea",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "项目",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.HOIModEditor.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main_window.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run.executor&quot;: &quot;Run&quot;,
+    &quot;Python.view.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ns992/Saved Games/GameMods/HOI4Modding/Library of Shuangze&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ns992\Documents\Paradox Interactive\Hearts of Iron IV\mod\Library of Shuangze\HOIModEditor\.idea\.idea.HOIModEditor\.idea" />
@@ -123,8 +107,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.248" />
-        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.248" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-PY-252.23892.515" />
+        <option value="bundled-python-sdk-7e47963ff851-f0eec537fc84-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.23892.515" />
       </set>
     </attachedChunks>
   </component>
@@ -180,6 +164,20 @@
       <workItem from="1755349890098" duration="175000" />
       <workItem from="1755350084377" duration="231000" />
       <workItem from="1755350383026" duration="56000" />
+      <workItem from="1755360138476" duration="335000" />
+      <workItem from="1755424742372" duration="9000" />
+      <workItem from="1755424956333" duration="14000" />
+      <workItem from="1755425385380" duration="4000" />
+      <workItem from="1755425427986" duration="6000" />
+      <workItem from="1755426410504" duration="24000" />
+      <workItem from="1755505342102" duration="1000" />
+      <workItem from="1755505411574" duration="78000" />
+      <workItem from="1755598422170" duration="114000" />
+      <workItem from="1755694190597" duration="173000" />
+      <workItem from="1756497859761" duration="26000" />
+      <workItem from="1756965009954" duration="85000" />
+      <workItem from="1756966565916" duration="37000" />
+      <workItem from="1756967356721" duration="97000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -221,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753728940683</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="重构文件">
+      <option name="closed" value="true" />
+      <created>1755360182052</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1755360182052</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +240,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="重构文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="重构文件" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/$main_window.coverage" NAME="main_window 覆盖结果" MODIFIED="1755344175965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HOIModEditor/main/view" />

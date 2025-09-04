@@ -1,0 +1,7 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/schemas/capability.schema.json",
+  "identifier": "default",
+  "permissions": [
+    "core:default"
+  ]
+}

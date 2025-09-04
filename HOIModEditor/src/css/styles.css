@@ -1,0 +1,65 @@
+:root {
+    --acrylic-bg: rgba(255, 255, 255, 0.6);
+    --acrylic-blur: 20px;
+    --reveal-hover: rgba(255, 255, 255, 0.3);
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --sidebar-width: 240px;
+    --transition-speed: 0.25s;
+    --text-color: #000;
+}
+
+[data-theme="dark"] {
+    --acrylic-bg: rgba(32, 32, 32, 0.6);
+    --text-color: #fff;
+    --reveal-hover: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    color: var(--text-color);
+    background: #f5f5f5;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    backdrop-filter: blur(var(--acrylic-blur));
+    background: var(--acrylic-bg);
+    box-shadow: 2px 0 8px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.sidebar-bottom {
+    padding: 0.5rem 0;
+}
+
+.sidebar-item {
+    display: block;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.sidebar-item:hover {
+    background: var(--reveal-hover);
+}
+
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    background: #fff;
+}
